@@ -165,7 +165,7 @@ title:
             .done(function (commits) {
                 var out = "";
                 for (var i = 0; i < 3; i++) {
-                    out += `<a href="${commits[i].commit.tree.url}"><li>${commits[i].author.login} - ${commits[i].commit.message}</li></a>`;
+                    out += `<li><a href="${commits[i].commit.tree.url}">${commits[i].author.login}:<br/>${commits[i].commit.message}</a></li>`;
                 }
                 $('#activity-loading').html(out)
             });
