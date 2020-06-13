@@ -34,10 +34,12 @@ $(document).ready( function() {
                 window.localStorage.setItem("TorqueDarkMode", "no");
                 $("html").removeClass("dark-mode");
                 $('#darkmode-toggle').text('Dark Mode');
+                dark = false;
             } else {
                 window.localStorage.setItem("TorqueDarkMode", "yes");
                 $("html").addClass("dark-mode");
                 $('#darkmode-toggle').text('Light Mode');
+                dark = true;
             }
             /*if(settingStored) {
                 if(window.localStorage.TorqueDarkMode === 'yes') {
