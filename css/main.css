@@ -25,10 +25,10 @@ body {
   padding-right: 1em;
   text-align: right;
 }
-
+/*
 .container {
   max-width: 760px!important;
-}
+}*/
 
 .site .navbar-default {
   background-color: white;
@@ -90,6 +90,9 @@ body {
     text-align: center;
   }
 }
+.jumbotron {
+  border-radius: 0 !important;
+}
 
 span.post-title {
   font-weight: bold;
@@ -117,7 +120,7 @@ a.media-subheading:hover {
 }
 
 .site {
-  margin: 51px auto 2em;
+  margin: 0 auto 2em;
   line-height: 1.5em;
 }
 
@@ -244,4 +247,71 @@ table.versioning > tbody > tr > td:first-child {
 
 .meta {
   margin-top: 10px;
+}
+
+
+/*-----------------------------------------------------------------------------
+ * Darkmode
+ */
+
+ .darkmode-toggle-container {
+  margin-left: auto;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#darkmode-toggle {
+  display: block;
+  cursor: pointer;
+  color: #d6d6d6;
+}
+
+html.dark-mode input[type=text], html.dark-mode textarea {
+  border-color: rgba(0,0,0,0.8);
+  background-color: #1d1d1d;
+  color: #d6d6d6;
+}
+
+html.dark-mode body {
+  background-color: #121212;
+  color: #d6d6d6;
+}
+
+html.dark-mode nav {
+  background-color: #2d2d2d !important;
+}
+
+html.dark-mode .card {
+  border-color: rgba(0,0,0,0.8);
+}
+
+html.dark-mode .card-body {
+  background-color: #282828;
+}
+
+html.dark-mode .card-footer {
+  background-color: #1d1d1d;
+}
+
+html.dark-mode .badge-inf {
+  background-color: #1d1d1d;
+  color: #d6d6d6;
+}
+
+html.dark-mode .nav-tabs .nav-link.active {
+  color: #d6d6d6;
+  background-color: #1d1d1d;
+}
+
+html.dark-mode #darkmode-modal .modal-content {
+  background-color: #1d1d1d;
+}
+
+html.dark-mode #darkmode-modal button.close {
+  color: #d6d6d6;
+}
+
+html.dark-mode .jumbotron {
+  background-color: #2b2b2b;
 }
