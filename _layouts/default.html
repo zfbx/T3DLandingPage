@@ -26,16 +26,12 @@
 
             <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" style="background-color:#990000">
                 <div class="container">
-                    <a class="navbar-brand" href="/"><img src="/img/torque.png" width="30" height="30" alt=""> {{ site.name }}</a>
+                    <a class="navbar-brand" href="/"><img src="/img/torque.png" width="32" height="32" alt=""> {{ site.name }}</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                         <ul class="navbar-nav">
-                            <!--<li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>-->
-                            
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="/engine" id="engineDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Engine
@@ -89,7 +85,7 @@
                                 <div class="dropdown-menu" aria-labelledby="communityDropdownMenuLink">
                                     <a class="dropdown-item" href="{{ site.forumsroot }}/"> Forums</a>
                                     <a class="dropdown-item" href="{{ site.forumsroot }}/viewforum.php?f=8"> Blogs</a>
-                                    <a class="dropdown-item" target="_blank" href="https://twitter.com/search?q=%23torque3d"><i class="fa fa-external-link"></i> Twitter</a>
+                                    <a class="dropdown-item" target="_blank" href="https://twitter.com/Torque_3D_MIT"><i class="fa fa-external-link"></i> Twitter</a>
                                     <a class="dropdown-item" target="_blank" href="https://www.facebook.com/Torque3D"><i class="fa fa-external-link"></i> Facebook</a>
                                     <a class="dropdown-item" target="_blank" href="http://widget.mibbit.com/?settings=4c4bdb0c9496a9cc6a3575af8756f5e4&server=irc.maxgaming.net&channel=%23garagegames"><i class="fa fa-external-link"></i> IRC webchat</a>
                                     <a class="dropdown-item" target="_blank" class="link-muted" href="http://www.garagegames.com/community/forums"><i class="fa fa-external-link"></i> Old forums</a>
@@ -115,14 +111,11 @@
                             <td><a href="https://github.com/{{ site.github }}">github.com/{{ site.github }}</a></td>
                         </tr>
                         <tr>
-                            <td>or at home</td>
-                            <td><a href="http://garagegames.com/community">garagegames.com/community</a></td>
+                            <td>or on the forums</td>
+                            <td><a href="{{ site.forumsroot }}">{{ site.forumsroot }}</a></td>
                         </tr>
-                        <tr>
-                            <td><a href="https://github.com/eightyeight/Torque3DLandingPage">design</a> by</td>
-                            <td><a href="https://github.com/eightyeight">eightyeight</a></td>
-                            <!-- Additional customizations added by zfbx (Darkmode)-->
-                        </tr>
+                        <!-- originally designed by eightyeight - heavily modified by zfbx -->
+                        <!-- Additional customizations added by zfbx (Darkmode)-->
                     </table>
                 </div>
             </div>

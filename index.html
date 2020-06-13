@@ -17,7 +17,10 @@ title:
     </div>
 </div>
 
-<div class="break"></div>
+<div id="examples1" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+    </div>
+</div>
 
 <div class="container">
     <div class="row">
@@ -67,7 +70,10 @@ title:
     </div>
 </div>
 
-<div class="break"></div>
+<div id="examples2" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+    </div>
+</div>
 
 <div class="container">
     <div class="row">
@@ -82,8 +88,10 @@ title:
         <div class="col-sm-4">
             <h2>Quick links</h2>
             <ul id="quick-links" class="list-unstyled">
-                <li><a href="https://github.com/{{ site.github }}/issues/new">Report an issue or suggest changes</a></li>
-                <li><a href="https://github.com/{{ site.github }}/issues?labels=Final+review">Changes for final review</a></li>
+                <li><a href="https://github.com/{{ site.github }}/issues/new">Report an issue or suggest changes</a>
+                </li>
+                <li><a href="https://github.com/{{ site.github }}/issues?labels=Final+review">Changes for final
+                        review</a></li>
                 <li><a href="http://t3dci.org">Builds and CI</a></li>
                 <li><a href="{{ site.forumsroot }}/viewforum.php?f=15">Forum News</a></li>
             </ul>
@@ -135,7 +143,20 @@ title:
             return o;
         }
 
-       
+
+        function loadSlideImages() {
+            slideshows = $('div.carousel-inner');
+            slideshows.each(function(i) {
+                var ids = shuffle(Object.keys(images));
+                var first = " active"
+                for (var i = 0; i < ids.length; i++) {
+                    $(this).append(`<div class="carousel-item${first}"><img class="d-block w-100" src="/img/banner${ids[i]}.jpg" alt="${images[ids[i]]}"></div>`);
+                    first = "";
+                }
+            });
+        }
+        loadSlideImages();
+
         function createBreaks() { // TODO: ensure no duplicate images occur.
             var breaks = $('div.break');
             var delay = 0;
@@ -154,7 +175,7 @@ title:
             });
         };
 
-        createBreaks();
+        //createBreaks();
 
         $.get('https://api.github.com/repos/{{ site.github }}/commits')
             .done(function (commits) {
@@ -169,7 +190,7 @@ title:
             .done(function (releases) {
                 var latest = releases[0];
                 $('<li/>').append($('<a/>')
-                    .attr('href', 'https://github.com/{{ site.github }}/releases/tag/'+latest.name)
+                    .attr('href', 'https://github.com/{{ site.github }}/releases/tag/' + latest.name)
                     .html('Download ' + latest.name)
                 ).prependTo('#quick-links');
             })

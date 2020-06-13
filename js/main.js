@@ -23,8 +23,7 @@ if (typeof(Storage) !== "undefined") {
 $(document).ready( function() {
 
     if (typeof(Storage) !== "undefined") {
-        // enable toggle
-        $("#darkmode-toggle").click(function() {
+        $("#darkmode-toggle").click(function() { // enable toggle
             if(settingStored) {
                 if(window.localStorage.TorqueDarkMode === 'yes') {
                     $("#darkmode-preference").html("Your current preference is set to: <b>dark mode</b>");
@@ -48,10 +47,8 @@ $(document).ready( function() {
                     $("#darkmode-no").prop("checked", true);
                 }
             }
-
             $("#darkmode-modal").modal();
         });
-
         $("#darkmode-save-button").click(function() {
             if($("#darkmode-yes").prop("checked")) {
                 window.localStorage.setItem("TorqueDarkMode", "yes");
@@ -72,15 +69,3 @@ $(document).ready( function() {
     }
 
 });
-
-
-function get(url) {
-    var req = new XMLHttpRequest(); // a new request
-    req.open("GET", url, false);
-    req.send(null);
-    return req.responseText; 
-}
-
-function getjson(url) {
-    return JSON.parse(get(url));
-}
