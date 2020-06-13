@@ -147,7 +147,6 @@ title:
             return o;
         }
 
-
         function loadSlideImages() {
             slideshows = $('div.carousel-inner');
             slideshows.each(function (i) {
@@ -160,26 +159,6 @@ title:
             });
         }
         loadSlideImages();
-
-        function createBreaks() { // TODO: ensure no duplicate images occur.
-            var breaks = $('div.break');
-            var delay = 0;
-            breaks.each(function (i) {
-                // Shuffle the list of pictures that will appear in each break.
-                var ids = shuffle(Object.keys(images));
-                for (var i = 0; i < ids.length; i++) {
-                    $(this).append($('<img>')
-                        .attr('width', '760px')
-                        .attr('height', '144px')
-                        .attr('src', '/img/banner' + ids[i] + '.jpg')
-                        .attr('title', images[ids[i]]));
-                }
-                $(this).cycle({ fx: 'fade', delay: delay });
-                delay += 5000 / breaks.length;
-            });
-        };
-
-        //createBreaks();
 
         $.get('https://api.github.com/repos/{{ site.github }}/commits')
             .done(function (commits) {
@@ -201,18 +180,5 @@ title:
             .fail(function () {
                 $('#current-version').html('error');
             });
-        /*
-        $.get('https://api.github.com/repos/{{ site.github }}/releases') // TODO: Check if this fixes after release v3.10.1 -zfbx
-            .done(function (releases) {
-                var latest = releases[0];
-                $('<li/>').append($('<a/>')
-                    .attr('href', latest.html_url)
-                    .html('Version ' + latest.name)
-                ).prependTo('#quick-links');
-            })
-            .fail(function () {
-                $('#current-version').html('error');
-            });
-        */
     });
 </script>
