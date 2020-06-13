@@ -159,7 +159,7 @@ title:
         $.get('https://api.github.com/repos/{{ site.github }}/commits')
             .done(function (commits) {
                 var out = "";
-                for (var i = 0; i < 3; i++) {
+                for (var i = 0; i < 5; i++) {
                     out += `<li>${commits[i].author.login}: <a href="${commits[i].commit.tree.url}">${commits[i].commit.message}</a></li>`;
                 }
                 $('#activity-loading').html(out)
