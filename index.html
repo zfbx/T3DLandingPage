@@ -74,25 +74,24 @@ title:
 
         <div class="col-sm-8">
             <h2 class="status">Activity</h2>
-            <p id="activity-loading">Loading activity...</p>
+            <ul id="activity-loading" class="list-unstyled">
+                <li>Loading activity...</li>
+            </ul>
         </div>
 
         <div class="col-sm-4">
             <h2>Quick links</h2>
-            <ul id="quick-links">
-                <li><a href="https://github.com/{{ site.github }}/issues/new">Report an issue or suggest changes</a>
-                </li>
-                <li><a href="https://github.com/{{ site.github }}/issues?labels=Final+review">Changes for final
-                        review</a></li>
+            <ul id="quick-links" class="list-unstyled">
+                <li><a href="https://github.com/{{ site.github }}/issues/new">Report an issue or suggest changes</a></li>
+                <li><a href="https://github.com/{{ site.github }}/issues?labels=Final+review">Changes for final review</a></li>
                 <li><a href="http://t3dci.org">Builds and CI</a></li>
-                <li><a class="pull-right" href="{{ site.forumsroot }}/viewforum.php?f=15">Forum News</a></li>
+                <li><a href="{{ site.forumsroot }}/viewforum.php?f=15">Forum News</a></li>
             </ul>
         </div>
     </div>
 </div>
 
 <script type="text/javascript" src="/js/jquery.cycle.all.js"></script>
-<script type="text/javascript" src="/js/jquery.timeago.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         var images = {
@@ -165,62 +164,7 @@ title:
                 }
                 $('#activity-loading').html(out)
             });
-        /* API No longer in service, replace with raw xml handling
-          getFeed('https://github.com/{{ site.github }}/commits/development.atom', 2)
-          .done(function (data) {
-            if(data.responseData.feed && data.responseData.feed.entries) {
-              var list = $('<ul/>').addClass('list-unstyled');
-              $.each(data.responseData.feed.entries, function (i, e) {
-                var li = $('<li/>').addClass('commit').appendTo(list);
-                var hash = e.link.split('/').pop().substr(0, 6);
-        
-                var content = e.contentSnippet.split('\n').pop();
-                var contentel = $('<p/>').text(content).appendTo(li);
-        
-                var hashel = $('<pre/>').addClass('inline').prependTo(contentel);
-                hashel.append($('<a/>')
-                  .text(hash)
-                  .attr('href', e.link)
-                  .attr('target', '_blank'));
-        
-                var d = new Date(e.publishedDate);
-                var stamp = $('<span/>').addClass('timeago').text('by ' + e.author + ' ').appendTo(li);
-                stamp.append($('<span/>')
-                  .attr('title', d.toISOString())
-                  .timeago());
-              });
-              $('#activity-loading').replaceWith(list);
-            }
-          })
-        
-          getFeed('{{ site.forumsroot }}/feed.php?mode=news', 1)
-          .done(function(data) {
-            if(data.responseData.feed && data.responseData.feed.entries) {
-              var news = $('#recent-news');
-              $.each(data.responseData.feed.entries, function (i, e) {
-                news.html('');
-                news.append($('<h5/>')
-                  .append($('<a/>')
-                    .attr('href', e.link)
-                    .html(e.title)
-                  )
-                );
-                var d = new Date(e.publishedDate);
-                var stamp = $('<span/>').addClass('timeago').text('by ' + e.author + ' ').appendTo(news);
-                stamp.append($('<span/>')
-                  .attr('title', d.toISOString())
-                  .timeago());
-        
-                news.append($('<p/>').html(e.contentSnippet + ' ')
-                  .append($('<a/>')
-                    .attr('href', e.link)
-                    .html('Read more')
-                  )
-                );
-              });
-            }
-          });
-        */
+
         $.get('https://api.github.com/repos/{{ site.github }}/tags')
             .done(function (releases) {
                 var latest = releases[0];
