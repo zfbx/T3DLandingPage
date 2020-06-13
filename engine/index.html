@@ -23,8 +23,7 @@ title: Engine
             <div class="no-gutters border rounded overflow-hidden mb-4 shadow-sm h-md-250">
                 <div class="col p-4 d-flex flex-column position-static">
                     <a class="mx-auto" href="{{ project.projecturl }}">
-                        <img height="150" width="150" class="img-thumbnail"
-                            src="/img/{{ project.imageurl }}" />
+                        <img height="150" width="150" class="img-thumbnail" src="/img/{{ project.imageurl }}" />
                     </a>
                     <h3 class="mb-0"><a href="{{ project.projecturl }}">{{ project.projectname }}</a></h3>
                     <div class="mb-1 text-muted"><a class="media-subheading"
@@ -75,8 +74,7 @@ title: Engine
         </div>
 
         <div class="row media">
-            <img class="pull-left feature" src="/img/editors-feature.jpg"
-                title="Metal Drift by Black Jacket Studios" />
+            <img class="pull-left feature" src="/img/editors-feature.jpg" title="Metal Drift by Black Jacket Studios" />
             <div class="media-body">
                 <h3 class="media-heading">Editors</h3>
                 <p>
@@ -107,8 +105,7 @@ title: Engine
         </div>
 
         <div class="row media">
-            <img class="pull-left feature" src="/img/networking-feature.jpg"
-                title="Frozen Endzone by Mode 7" />
+            <img class="pull-left feature" src="/img/networking-feature.jpg" title="Frozen Endzone by Mode 7" />
             <div class="media-body">
                 <h3 class="media-heading">Networking</h3>
                 <p>
@@ -129,8 +126,7 @@ title: Engine
         </div>
 
         <div class="row media">
-            <img class="pull-left feature" src="/img/physics-feature.jpg"
-                title="Pacific Demo by GarageGames" />
+            <img class="pull-left feature" src="/img/physics-feature.jpg" title="Pacific Demo by GarageGames" />
             <div class="media-body">
                 <h3 class="media-heading">Physics</h3>
                 <p>
@@ -163,17 +159,20 @@ title: Engine
                     using a custom C-like language called TorqueScript. You can create
                     whole games without touching a line of C++. Check this out:
                 </p>
-                <pre><code>$minion = new AIPlayer() {
-   datablock = MinionData;
-};
-$minion.name = "Fubar";
-$minion.setMoveDestination("50 0 0");
+                <pre><code>
+                    $minion = new AIPlayer() {
+                        datablock = MinionData;
+                    };
+                    $minion.name = "Fubar";
+                    $minion.setMoveDestination("50 0 0");
 
-function Fubar::onReachDestination(%self) {
-   echo("I made it! Says" SPC %self.name);
-}</code></pre>
+                    function Fubar::onReachDestination(%self) {
+                        echo("I made it! Says" SPC %self.name);
+                    }
+                </code></pre>
             </div>
         </div>
+        
     </div>
 
     <div class="banner">
@@ -292,4 +291,3 @@ function Fubar::onReachDestination(%self) {
             </tr>
         </table>
     </div>
-    

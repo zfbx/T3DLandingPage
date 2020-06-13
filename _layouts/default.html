@@ -1,161 +1,151 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width">
-        {% if page.title %}
-            <title>{{ site.name }} - {{ page.title }}</title>
-        {% else %}
-            <title>{{ site.name }}</title>
-        {% endif %}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-        <link rel="stylesheet" href="/css/main.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="/css/font-awesome.min.css">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    {% if page.title %}
+    <title>{{ site.name }} - {{ page.title }}</title>
+    {% else %}
+    <title>{{ site.name }}</title>
+    {% endif %}
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="/js/main.js"></script>
-    </head>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
 
-    <body>
-        <div class="site">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+</head>
 
-            <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" style="background-color:#990000">
-                <div class="container">
-                    <a class="navbar-brand" href="/"><img src="/img/torque.png" width="32" height="32" alt=""> {{ site.name }}</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="/engine" id="engineDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Engine
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="engineDropdownMenuLink">
-                                    <a class="dropdown-item" href="/engine#made-with-torque">Made with Torque</a>
-                                    <a class="dropdown-item" href="/engine#features">Features</a>
-                                    <a class="dropdown-item" href="/engine#roadmap">Roadmap</a>
-                                    <a class="dropdown-item" href="/engine#history">History</a>
-                                </div>
-                            </li>
-                            
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="/start" id="startDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Get started
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="startDropdownMenuLink">
-                                    <a class="dropdown-item" href="/start#download">Download</a>
-                                    <a class="dropdown-item" href="/start#tutorials">Tutorials</a>
-                                    <a class="dropdown-item" href="{{ site.wikiroot }}/">Wiki</a>
-                                </div>
-                            </li>
+<body>
+    <div class="site">
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="/committee" id="committeeDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Committee
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="committeeDropdownMenuLink">
-                                    <a class="dropdown-item" href="/committee#what-is-the-steering-committee">What is the Steering Committee?</a>
-                                    <a class="dropdown-item" href="/committee#current-membership">Current membership</a>
-                                    <a class="dropdown-item" href="/committee#charter">Charter</a>
-                                </div>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="/contribute" id="contributeDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Contribute
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="contributeDropdownMenuLink">
-                                    <a class="dropdown-item" href="/contribute#get-the-source-code">Get the source code</a>
-                                    <a class="dropdown-item" href="/contribute#pull-request-guide">Pull-request guide</a>
-                                    <a class="dropdown-item" href="/contribute#version-policy">Version policy</a>
-                                    <a class="dropdown-item" href="/contribute#issues-and-requests">Issues and feature requests</a>
-                                </div>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="/community" id="communityDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Community
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="communityDropdownMenuLink">
-                                    <a class="dropdown-item" href="{{ site.forumsroot }}/"> Forums</a>
-                                    <a class="dropdown-item" href="{{ site.forumsroot }}/viewforum.php?f=8"> Blogs</a>
-                                    <a class="dropdown-item" target="_blank" href="https://twitter.com/Torque_3D_MIT"><i class="fa fa-external-link"></i> Twitter</a>
-                                    <a class="dropdown-item" target="_blank" href="https://www.facebook.com/Torque3D"><i class="fa fa-external-link"></i> Facebook</a>
-                                    <a class="dropdown-item" target="_blank" href="http://widget.mibbit.com/?settings=4c4bdb0c9496a9cc6a3575af8756f5e4&server=irc.maxgaming.net&channel=%23garagegames"><i class="fa fa-external-link"></i> IRC webchat</a>
-                                    <a class="dropdown-item" target="_blank" class="link-muted" href="http://www.garagegames.com/community/forums"><i class="fa fa-external-link"></i> Old forums</a>
-                                    <a class="dropdown-item" target="_blank" class="link-muted" href="http://www.garagegames.com/community/blogs"><i class="fa fa-external-link"></i> Old blogs</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
-            {{ content }}
-
+        <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
             <div class="container">
-                <div class="footer">
-                    <table class="contact">
-                        <tr>
-                            <td></td>
-                            <td><span id="darkmode-toggle" style="cursor: pointer;text-decoration:underline">Dark Mode</span></td>
-                        </tr>
-                        <tr>
-                            <td>Visit us on GitHub</td>
-                            <td><a href="https://github.com/{{ site.github }}">github.com/{{ site.github }}</a></td>
-                        </tr>
-                        <tr>
-                            <td>or on the forums</td>
-                            <td><a href="{{ site.forumsroot }}">{{ site.forumsroot }}</a></td>
-                        </tr>
-                        <!-- originally designed by eightyeight - heavily modified by zfbx -->
-                        <!-- Additional customizations added by zfbx (Darkmode)-->
-                    </table>
+                <a class="navbar-brand" href="/"><img src="/img/torque.png" width="32" height="32" alt="">
+                    {{ site.name }}</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/engine" id="engineDropdownMenuLink" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Engine
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="engineDropdownMenuLink">
+                                <a class="dropdown-item" href="/engine#made-with-torque">Made with Torque</a>
+                                <a class="dropdown-item" href="/engine#features">Features</a>
+                                <a class="dropdown-item" href="/engine#roadmap">Roadmap</a>
+                                <a class="dropdown-item" href="/engine#history">History</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/start" id="startDropdownMenuLink" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Get started
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="startDropdownMenuLink">
+                                <a class="dropdown-item" href="/start#download">Download</a>
+                                <a class="dropdown-item" href="/start#tutorials">Tutorials</a>
+                                <a class="dropdown-item" href="{{ site.wikiroot }}/">Wiki</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/committee" id="committeeDropdownMenuLink"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Committee
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="committeeDropdownMenuLink">
+                                <a class="dropdown-item" href="/committee#what-is-the-steering-committee">What is the
+                                    Steering Committee?</a>
+                                <a class="dropdown-item" href="/committee#current-membership">Current membership</a>
+                                <a class="dropdown-item" href="/committee#charter">Charter</a>
+                            </div>
+                        </li>
+
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/contribute" id="contributeDropdownMenuLink"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Contribute
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="contributeDropdownMenuLink">
+                                <a class="dropdown-item" href="/contribute#get-the-source-code">Get the source code</a>
+                                <a class="dropdown-item" href="/contribute#pull-request-guide">Pull-request guide</a>
+                                <a class="dropdown-item" href="/contribute#version-policy">Version policy</a>
+                                <a class="dropdown-item" href="/contribute#issues-and-requests">Issues and feature
+                                    requests</a>
+                            </div>
+                        </li>-->
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/community" id="communityDropdownMenuLink"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Community
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="communityDropdownMenuLink">
+                                <a class="dropdown-item" href="{{ site.forumsroot }}/"> Forums</a>
+                                <a class="dropdown-item" href="{{ site.forumsroot }}/viewforum.php?f=8"> Blogs</a>
+                                <a class="dropdown-item" target="_blank"
+                                    href="https://discord.gg/wz2ZrRH"><i
+                                        class="fa fa-external-link"></i> Discord</a>
+                                <a class="dropdown-item" target="_blank" href="https://twitter.com/Torque_3D_MIT"><i
+                                        class="fa fa-external-link"></i> Twitter</a>
+                                <a class="dropdown-item" target="_blank" href="https://www.facebook.com/Torque3D"><i
+                                        class="fa fa-external-link"></i> Facebook</a>
+                                
+                                <a class="dropdown-item" target="_blank" class="link-muted"
+                                    href="http://www.garagegames.com/community/forums"><i
+                                        class="fa fa-external-link"></i> Old forums</a>
+                                <a class="dropdown-item" target="_blank" class="link-muted"
+                                    href="http://www.garagegames.com/community/blogs"><i
+                                        class="fa fa-external-link"></i> Old blogs</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
+            </div>
+        </nav>
+
+        {{ content }}
+
+        <div class="container">
+            <div class="footer">
+                <table class="contact">
+                    <tr>
+                        <td></td>
+                        <td><span id="darkmode-toggle" style="cursor: pointer;text-decoration:underline">Dark
+                                Mode</span></td>
+                    </tr>
+                    <tr>
+                        <td>Visit us on GitHub</td>
+                        <td><a href="https://github.com/{{ site.github }}">github.com/{{ site.github }}</a></td>
+                    </tr>
+                    <tr>
+                        <td>or on the forums</td>
+                        <td><a href="{{ site.forumsroot }}">{{ site.forumsroot }}</a></td>
+                    </tr>
+                    <!-- originally designed by eightyeight - heavily modified by zfbx -->
+                    <!-- Additional customizations added by zfbx (Darkmode)-->
+                </table>
             </div>
         </div>
+    </div>
 
-<!--    <div class="modal" tabindex="-1" role="dialog" id="darkmode-modal" style="display: none;" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Set dark mode preference</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>You can choose whether to show the {{ site.name }} site in light mode or dark mode here.</p>
-                        <p id="darkmode-preference">Currently set to: <b>light mode</b></p>
-                        <p style="font-size: 0.8rem"><i>Note: Your preference will be stored in client-side local storage, not cookies. Your preference is never sent to any {{ site.name }} server.</i></p>
-                        <label><input type="radio" name="dark-mode" value="no" id="darkmode-no">
-                            Light mode</label>
-                        <br>
-                        <label><input type="radio" name="dark-mode" value="yes" id="darkmode-yes">
-                            Dark mode</label>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="darkmode-save-button">Save changes</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>-->
+</body>
 
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-50160060-1', 'garagegames.github.io');
-          ga('send', 'pageview');
-        </script>
-    </body>
 </html>
