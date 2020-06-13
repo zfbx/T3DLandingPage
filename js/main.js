@@ -33,11 +33,11 @@ $(document).ready( function() {
             if (dark) {
                 window.localStorage.setItem("TorqueDarkMode", "no");
                 $("html").removeClass("dark-mode");
-                $('#darkmode-toggle').text('Light Mode');
+                $('#darkmode-toggle').text('Dark Mode');
             } else {
                 window.localStorage.setItem("TorqueDarkMode", "yes");
                 $("html").addClass("dark-mode");
-                $('#darkmode-toggle').text('Dark Mode');
+                $('#darkmode-toggle').text('Light Mode');
             }
             /*if(settingStored) {
                 if(window.localStorage.TorqueDarkMode === 'yes') {
@@ -81,15 +81,17 @@ $(document).ready( function() {
         // make the toggle just an actual toggle that doesn't save anything
         $("#darkmode-toggle").click(function() {
             //$("html").toggleClass("dark-mode");
-            
+
             if (dark) {
                 window.localStorage.setItem("TorqueDarkMode", "no");
                 $("html").removeClass("dark-mode");
-                $('#darkmode-toggle').text('Light Mode');
+                $('#darkmode-toggle').text('Dark Mode');
+                dark = false;
             } else {
                 window.localStorage.setItem("TorqueDarkMode", "yes");
                 $("html").addClass("dark-mode");
-                $('#darkmode-toggle').text('Dark Mode');
+                $('#darkmode-toggle').text('Light Mode');
+                dark = true;
             }
         });
     }
