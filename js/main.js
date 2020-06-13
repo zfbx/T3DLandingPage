@@ -72,3 +72,15 @@ $(document).ready( function() {
     }
 
 });
+
+
+function get(url) {
+    var req = new XMLHttpRequest(); // a new request
+    req.open("GET", url, false);
+    req.send(null);
+    return req.responseText; 
+}
+
+function getjson(url) {
+    return JSON.parse(get(url));
+}
