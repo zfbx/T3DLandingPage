@@ -1,3 +1,7 @@
 name: Torque 3D
+root: https://torque3d.org
 permalink: /news/:year/:title
 markdown: kramdown
+wikiroot: https://wiki.torque3d.org
+forumsroot: https://forums.torque3d.org
+github: TorqueGameEngines/Torque3D

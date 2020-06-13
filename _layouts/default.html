@@ -4,88 +4,102 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
+        {% if page.title %}
+            <title>{{ site.name }} - {{ page.title }}</title>
+        {% else %}
+            <title>{{ site.name }}</title>
+        {% endif %}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-        <title>{{page.title}}</title>
-        <link rel="icon" type="image/x-icon" href="{{page.root}}/favicon.ico">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
 
-        <link rel="stylesheet" href="{{page.root}}/css/main.css">
-        <link rel="stylesheet" href="{{page.root}}/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{{page.root}}/css/font-awesome.min.css">
-
-        <script type="text/javascript" src="{{page.root}}/js/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="{{page.root}}/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/js/main.js"></script>
     </head>
 
     <body>
         <div class="site">
-            <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+            <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" style="background-color:#990000">
                 <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="{{page.root}}/">Torque 3D</a>
-                    </div>
-
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <a href="{{page.root}}/engine" class="dropdown-toggle" data-toggle="dropdown">Engine<i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{page.root}}/engine#made-with-torque">Made with Torque</a></li>
-                                    <li><a href="{{page.root}}/engine#features">Features</a></li>
-                                    <li><a href="{{page.root}}/engine#roadmap">Roadmap</a></li>
-                                    <li><a href="{{page.root}}/engine#history">History</a></li>
-                                </ul>
+                    <a class="navbar-brand" href="/"><img src="/img/torque.png" width="30" height="30" alt=""> {{ site.name }}</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <!--<li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>-->
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/engine" id="engineDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Engine
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="engineDropdownMenuLink">
+                                    <a class="dropdown-item" href="/engine#made-with-torque">Made with Torque</a>
+                                    <a class="dropdown-item" href="/engine#features">Features</a>
+                                    <a class="dropdown-item" href="/engine#roadmap">Roadmap</a>
+                                    <a class="dropdown-item" href="/engine#history">History</a>
+                                </div>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/start" id="startDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Get started
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="startDropdownMenuLink">
+                                    <a class="dropdown-item" href="/start#download">Download</a>
+                                    <a class="dropdown-item" href="/start#tutorials">Tutorials</a>
+                                    <a class="dropdown-item" href="{{ site.wikiroot }}/">Wiki</a>
+                                </div>
                             </li>
 
-                            <li class="dropdown">
-                                <a href="{{page.root}}/start" class="dropdown-toggle" data-toggle="dropdown">Get started<i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{page.root}}/start#download">Download</a></li>
-                                    <li><a href="{{page.root}}/start#tutorials">Tutorials</a></li>
-                                    <li><a href="http://wiki.torque3d.org/"> Wiki</a></li>
-                                </ul>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/committee" id="committeeDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Committee
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="committeeDropdownMenuLink">
+                                    <a class="dropdown-item" href="/committee#what-is-the-steering-committee">What is the Steering Committee?</a>
+                                    <a class="dropdown-item" href="/committee#current-membership">Current membership</a>
+                                    <a class="dropdown-item" href="/committee#charter">Charter</a>
+                                </div>
                             </li>
 
-                            <li class="dropdown">
-                                <a href="{{page.root}}/committee" class="dropdown-toggle" data-toggle="dropdown">Committee<i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{page.root}}/committee#what-is-the-steering-committee">What is the Steering Committee?</a></li>
-                                    <li><a href="{{page.root}}/committee#current-membership">Current membership</a></li>
-                                    <li><a href="{{page.root}}/committee#charter">Charter</a></li>
-                                </ul>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/contribute" id="contributeDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Contribute
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="contributeDropdownMenuLink">
+                                    <a class="dropdown-item" href="/contribute#get-the-source-code">Get the source code</a>
+                                    <a class="dropdown-item" href="/contribute#pull-request-guide">Pull-request guide</a>
+                                    <a class="dropdown-item" href="/contribute#version-policy">Version policy</a>
+                                    <a class="dropdown-item" href="/contribute#issues-and-requests">Issues and feature requests</a>
+                                </div>
                             </li>
 
-                            <li class="dropdown">
-                                <a href="{{page.root}}/contribute" class="dropdown-toggle" data-toggle="dropdown">Contribute<i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{page.root}}/contribute#get-the-source-code">Get the source code</a></li>
-                                    <li><a href="{{page.root}}/contribute#pull-request-guide">Pull-request guide</a></li>
-                                    <li><a href="{{page.root}}/contribute#version-policy">Version policy</a></li>
-                                    <li><a href="{{page.root}}/contribute#issues-and-requests">Issues and feature requests</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="{{page.root}}/community" class="dropdown-toggle" data-toggle="dropdown">Community<i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="http://forums.torque3d.org/"> Forums</a></li>
-                                    <li><a href="http://forums.torque3d.org/viewforum.php?f=8"> Blogs</a></li>
-                                    <li><a target="_blank" href="https://twitter.com/search?q=%23torque3d"><i class="fa fa-external-link"></i> Twitter</a></li>
-                                    <li><a target="_blank" href="https://www.facebook.com/Torque3D"><i class="fa fa-external-link"></i> Facebook</a></li>
-                                    <li><a target="_blank" href="http://widget.mibbit.com/?settings=4c4bdb0c9496a9cc6a3575af8756f5e4&server=irc.maxgaming.net&channel=%23garagegames"><i class="fa fa-external-link"></i> IRC webchat</a></li>
-                                    <li><a target="_blank" class="link-muted" href="http://www.garagegames.com/community/forums"><i class="fa fa-external-link"></i> Old forums</a></li>
-                                    <li><a target="_blank" class="link-muted" href="http://www.garagegames.com/community/blogs"><i class="fa fa-external-link"></i> Old blogs</a></li>
-                                </ul>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/community" id="communityDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Community
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="communityDropdownMenuLink">
+                                    <a class="dropdown-item" href="{{ site.forumsroot }}/"> Forums</a>
+                                    <a class="dropdown-item" href="{{ site.forumsroot }}/viewforum.php?f=8"> Blogs</a>
+                                    <a class="dropdown-item" target="_blank" href="https://twitter.com/search?q=%23torque3d"><i class="fa fa-external-link"></i> Twitter</a>
+                                    <a class="dropdown-item" target="_blank" href="https://www.facebook.com/Torque3D"><i class="fa fa-external-link"></i> Facebook</a>
+                                    <a class="dropdown-item" target="_blank" href="http://widget.mibbit.com/?settings=4c4bdb0c9496a9cc6a3575af8756f5e4&server=irc.maxgaming.net&channel=%23garagegames"><i class="fa fa-external-link"></i> IRC webchat</a>
+                                    <a class="dropdown-item" target="_blank" class="link-muted" href="http://www.garagegames.com/community/forums"><i class="fa fa-external-link"></i> Old forums</a>
+                                    <a class="dropdown-item" target="_blank" class="link-muted" href="http://www.garagegames.com/community/blogs"><i class="fa fa-external-link"></i> Old blogs</a>
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </div>
+            </nav>
 
             {{ content }}
 
@@ -93,8 +107,12 @@
                 <div class="footer">
                     <table class="contact">
                         <tr>
+                            <td><span id="darkmode-text">Enabled / Disable</span></td>
+                            <td><span id="darkmode-toggle" style="cursor: pointer;text-decoration:underline">Darkmode</span></td>
+                        </tr>
+                        <tr>
                             <td>Visit us on GitHub</td>
-                            <td><a href="https://github.com/GarageGames/Torque3D">github.com/GarageGames/Torque3D</a></td>
+                            <td><a href="https://github.com/{{ site.github }}">github.com/{{ site.github }}</a></td>
                         </tr>
                         <tr>
                             <td>or at home</td>
@@ -103,8 +121,36 @@
                         <tr>
                             <td><a href="https://github.com/eightyeight/Torque3DLandingPage">design</a> by</td>
                             <td><a href="https://github.com/eightyeight">eightyeight</a></td>
+                            <!-- Additional customizations added by zfbx (Darkmode)-->
                         </tr>
                     </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" tabindex="-1" role="dialog" id="darkmode-modal" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Set dark mode preference</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>You can choose whether to show the {{ site.name }} site in light mode or dark mode here.</p>
+                        <p id="darkmode-preference">Your current preference is set to: <b>light mode</b></p>
+                        <p><i>Note: Your preference will be stored in client-side local storage, not cookies. Your preference is never sent to any {{ site.name }} server.</i></p>
+                        <label><input type="radio" name="dark-mode" value="no" id="darkmode-no">
+                            Light mode</label>
+                        <br>
+                        <label><input type="radio" name="dark-mode" value="yes" id="darkmode-yes">
+                            Dark mode</label>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="darkmode-save-button">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
