@@ -161,6 +161,14 @@ title:
 
         createBreaks();
 
+        $.get('https://api.github.com/repos/{{ site.github }}/commits')
+            .done(function (commits) {
+                var out = "";
+                for (var i = 0; i < 3; i++) {
+                    out += `<a href="${commits[i].commit.tree.url}"><li>${commits[i].author.login} - ${commits[i].message}</li></a>`;
+                }
+                $('#activity-loading').html(out)
+            });
         /* API No longer in service, replace with raw xml handling
           getFeed('https://github.com/{{ site.github }}/commits/development.atom', 2)
           .done(function (data) {
@@ -195,14 +203,12 @@ title:
               var news = $('#recent-news');
               $.each(data.responseData.feed.entries, function (i, e) {
                 news.html('');
-        
                 news.append($('<h5/>')
                   .append($('<a/>')
                     .attr('href', e.link)
                     .html(e.title)
                   )
                 );
-        
                 var d = new Date(e.publishedDate);
                 var stamp = $('<span/>').addClass('timeago').text('by ' + e.author + ' ').appendTo(news);
                 stamp.append($('<span/>')
@@ -230,7 +236,7 @@ title:
             .fail(function () {
                 $('#current-version').html('error');
             });
-/*
+        /*
         $.get('https://api.github.com/repos/{{ site.github }}/releases') // TODO: Check if this fixes after release v3.10.1 -zfbx
             .done(function (releases) {
                 var latest = releases[0];
@@ -242,21 +248,6 @@ title:
             .fail(function () {
                 $('#current-version').html('error');
             });
-*/
-        // Get a feed through the Google feeds API with hourly caching.
-        function getFeed(feed, numResults) {
-            var now = new Date();
-            var googleAPI = document.location.protocol +
-                '//ajax.googleapis.com/ajax/services/feed/load?' +
-                'v=1.0' +
-                '&dailycache=' + [now.getUTCDate(), now.getUTCMonth(), now.getUTCFullYear()].join('-') +
-                '&num=' + numResults +
-                '&callback=?&q=';
-            var url = googleAPI + encodeURIComponent(feed);
-            return $.ajax({
-                url: url,
-                dataType: 'json'
-            });
-        }
+        */
     });
 </script>
