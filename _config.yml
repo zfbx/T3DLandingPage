@@ -1,6 +1,6 @@
 name: Torque 3D
 root: https://torque3d.org
-permalink: /news/:year/:title
+permalink: /news/:title
 markdown: kramdown
 wikiroot: https://wiki.torque3d.org
 forumsroot: https://forums.torque3d.org
