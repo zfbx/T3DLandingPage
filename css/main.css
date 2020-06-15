@@ -303,7 +303,7 @@ html.dark-mode .dropdown-item:hover,
 html.dark-mode .dropdown-item:select, 
 html.dark-mode .dropdown-item:active {
     color: #ffffff !important;
-    color: #343a40 !important;
+    background-color: #343a40 !important;
 }
 html.dark-mode h3 a {
     color: #ffffff;
