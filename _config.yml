@@ -3,11 +3,33 @@ root: https://torque3d.org
 permalink: /:categories/:title
 markdown: kramdown
 kramdown:
-  syntax_highlighter: rouge
-  input: GFM
-  auto_ids: true
-  toc_levels: 1..3
+    syntax_highlighter: rouge
+    input: GFM
+    auto_ids: true
+    toc_levels: 1..3
 wikiroot: https://wiki.torque3d.org
 forumsroot: https://forums.torque3d.org
 github: TorqueGameEngines/Torque3D
 keep_files: [img, fonts, css, js]
+authors:
+    jeff:
+        display_name: Jeff
+        about:
+        email: mailto:test@emample.com
+        web: https://google.com
+        github: https://github.com/areloch
+        icon: https://avatars1.githubusercontent.com/u/2553124?s=460&u=d36cefba23f6f6feb23ec51eb9da4604beae5106&v=4
+    tony:
+        display_name: Tony
+        about: Just your average programmer who specializes in web technologies.
+        email: 
+        web: https://bunny.cc
+        github: https://github.com/zfbx
+        icon: https://avatars0.githubusercontent.com/u/1414927?s=460&u=c7a675e29d0fe1b0c5f07e861c3960c49e03b91b&v=4
+    steve:
+        display_name: Steve Yorkshire
+        about:
+        email:
+        web:
+        github:
+        icon:

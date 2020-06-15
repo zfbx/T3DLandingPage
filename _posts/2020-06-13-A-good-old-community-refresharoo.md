@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "A good old community regresharoo"
+title:  "A good old community refresharoo"
 categories: News
 tags: 
+description: community update in regards to the repository, community, roles, landing page, docs, wiki, discord, forums, community project.
 ---
 
 So a number of complaints, issues, grievances, dismays, challenges, hangups, roadbumps or whatever other words for problems or inconveniences have been sorta... around, but haven't really been enough of an issue to frontline with the limited time everyone has to work on stuff.

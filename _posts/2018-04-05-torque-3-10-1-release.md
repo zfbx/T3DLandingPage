@@ -3,6 +3,7 @@ layout: post
 title:  "Torque 3D 3.10.1 Hotfix Released!"
 categories: News
 tags: 
+description: Release notes for torque 3D 3.10.1
 ---
 
 Hey everyone!
