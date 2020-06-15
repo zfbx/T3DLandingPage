@@ -193,16 +193,16 @@ table.versioning>tbody>tr>td:first-child {
     z-index: 10009; /* Fix it from hiding behind navbar*/
 }
 .badge-t3d {
-    color: #ffffff;
-    background-color: #fc5788;
+    color: #ffffff !important;
+    background-color: #fc5788 !important;
 }
 .badge-t2d {
-    color: #ffffff;
-    background-color: #57aafc;
+    color: #ffffff !important;
+    background-color: #57aafc !important;
 }
 .badge-tge {
-    color: #ffffff;
-    background-color: #99fc57;
+    color: #ffffff !important;
+    background-color: #99fc57 !important;
 }
 
 
@@ -354,16 +354,16 @@ html.dark-mode .editor-toolbar a.active, html.dark-mode  .editor-toolbar a:hover
     background: #3f3f3f;
 }
 html.dark-mode .badge-t3d {
-    color: #ffffff;
-    background-color: #fc5788;
+    color: #ffffff !important;
+    background-color: #fc5788 !important;
 }
 html.dark-mode .badge-t2d {
-    color: #ffffff;
-    background-color: #57aafc;
+    color: #ffffff !important;
+    background-color: #57aafc !important;
 }
 html.dark-mode .badge-tge {
-    color: #ffffff;
-    background-color: #99fc57;
+    color: #ffffff !important;
+    background-color: #99fc57 !important;
 }
 
 /* Darkmode Code */
