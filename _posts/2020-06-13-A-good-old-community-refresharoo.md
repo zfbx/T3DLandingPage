@@ -1,9 +1,11 @@
 ---
 layout: post
-title:  "A good old community refresharoo"
 categories: News
 tags: 
+
+title:  "A good old community refresharoo"
 description: community update in regards to the repository, community, roles, landing page, docs, wiki, discord, forums, community project.
+author: areloch
 ---
 
 So a number of complaints, issues, grievances, dismays, challenges, hangups, roadbumps or whatever other words for problems or inconveniences have been sorta... around, but haven't really been enough of an issue to frontline with the limited time everyone has to work on stuff.

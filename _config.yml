@@ -12,14 +12,14 @@ forumsroot: https://forums.torque3d.org
 github: TorqueGameEngines/Torque3D
 keep_files: [img, fonts, css, js]
 authors:
-    jeff:
+    areloch:
         name: Jeff
         about:
         email: mailto:test@emample.com
         web: https://google.com
         github: https://github.com/areloch
         image: https://avatars1.githubusercontent.com/u/2553124?s=460&u=d36cefba23f6f6feb23ec51eb9da4604beae5106&v=4
-    tony:
+    zfbx:
         name: Tony
         about: Just your average programmer who specializes in web technologies.
         email: 

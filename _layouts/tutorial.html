@@ -1,12 +1,15 @@
 ---
 layout: default
 ---
+{% if page.author %}
+    {% assign author = site.authors[page.author] %}
+{% endif %}
 
 <div class="banner">
     <div class="container my-3">
         <h2>{{page.title}}</h2>
         <span class="meta pull-right">{{ page.date | date: "%B %-d, %Y"}}</span>
-        <span class="info">Created by {{ page.author }} 
+        <span class="info">Created by {{ author.name }} 
             {% for tag in page.tags %}
             <span class="badge badge-light">{{ tag }}</span>
             {% endfor %}
@@ -20,7 +23,6 @@ layout: default
     </div>
 
     {% if page.author %}
-        {% assign author = site.authors[page.author] %}
         {% include  author.html %}
     {% endif %}
 
