@@ -13,7 +13,9 @@ layout: default
             {% if author.name %}
             Created by {{ author.name }}  
             {% endif %}
-            {% include tags.html tags=page.tags %}
+            {% for tag in page.tags %}
+            <a href="/tags/{{ tag }}"><span class="badge badge-light">{{ tag | upcase }}</span></a>
+            {% endfor %}
         </span>
     </div>
 </div>
