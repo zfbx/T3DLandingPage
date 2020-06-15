@@ -221,6 +221,7 @@ table.versioning>tbody>tr>td:first-child {
 
 .navbar-brand img {
     background-color: #990000;
+    padding: 2px;
 }
 
 /*-----------------------------------------------------------------------------
