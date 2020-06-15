@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Tutorials
+categories: News
 ---
 
 <div class="banner"><div class="container">
@@ -9,8 +10,8 @@ title: Tutorials
 
 <div class="container">
     <ul class="list-unstyled">
-    {% for post in site.categories[tutorial] %}
-        {% include tutorial.html tutorial=post %}
+    {% for post in site.categories.Tutorials %}
+        {% include tutorial.html post=post %}
     {% endfor %}
     </ul>
 </div>

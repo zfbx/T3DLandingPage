@@ -6,9 +6,9 @@
       </a>
     </div>--> 
     <div class="col-md-12">
-      <h4><a href="{{tutorial.url}}">{{include.post.title}} - <sub>{{include.tutorial.torqueversion}}</sub></a></h4>
-      <span class="info">{{include.tutorial.date | date: "%B %-d, %Y"}} - {{include.tutorial.author}}</span>
+      <h4><a href="{{post.url}}">{{include.post.title}} - <sub>{{include.tutorial.tags}}</sub></a></h4>
+      <span class="info">{{include.post.date | date: "%B %-d, %Y"}} - {{include.post.author}}</span>
       <p>{{ include.tutorial.description }}</p>
-      <a class="btn btn-primary" href="{{tutorial.url}}">Go to Tutorial</a>
+      <a class="btn btn-primary" href="{{post.url}}">Go to Tutorial</a>
     </div>
 </div>
