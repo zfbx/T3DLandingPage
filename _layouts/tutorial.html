@@ -6,7 +6,7 @@ layout: default
     <div class="container my-3">
         <h2>{{page.title}}</h2>
         <span class="meta pull-right">{{ page.date | date: "%B %-d, %Y"}}</span>
-        <span class="info">Created by {{ page.author }} for {{ page.tags }}</span>
+        <span class="info">Created by {{ page.author }} for {{ page.tags | capitalize | join: ', ' }}</span>
     </div>
 </div>
 
