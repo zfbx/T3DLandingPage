@@ -12,6 +12,7 @@ categories: Tutorials
 Faking aircraft zooming overhead like all the cool FPS's have ... but let's expand on that and have fake aircraft deliver REAL airstrikes! in T3D using scripted objects, baffling 3D maths and raycasts.
 
 ### Code
+
 ```cs
 %localvar = 42;
 $globalvar = "Bob";

@@ -18,7 +18,11 @@ permalink: /tutorials/
             </a>
             </div>--> 
             <div class="col-md-12">
-            <h4><a href="{{post.url}}">{{ post.title }} - <sub>{{ post.tags }}</sub></a></h4>
+            <h4><a href="{{post.url}}">{{ post.title }} <sub>
+                {% for tag in post.tags %}
+                <span class="badge badge-pill badge-light">{{ tag }}</span>
+                {% endfor %}
+            </sub></a></h4>
             <span class="info">{{ post.date | date: "%B %-d, %Y" }} - {{ post.author }}</span>
             <p>{{ post.description }}</p>
             <a class="btn btn-primary" href="{{post.url}}">Go to Tutorial</a>
