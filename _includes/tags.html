@@ -1,4 +1,5 @@
 {% assign taglist = tags | join: " " %}
+
 {% if taglist contains "t3d" %}
     <span class="badge badge-dark badge-t3d">T3D
         {% for tag in tags %}
@@ -9,6 +10,7 @@
         {% endfor %}</span>
     </span>
 {% endif %}
+
 {% if taglist contains "t2d" %}
     <span class="badge badge-dark badge-t2d">T2D
         {% for tag in tags %}
@@ -19,6 +21,7 @@
         {% endfor %}</span>
     </span>
 {% endif %}
+
 {% if taglist contains "tge" %}
     <span class="badge badge-dark badge-tge">TGE
         {% for tag in tags %}
@@ -29,6 +32,7 @@
         {% endfor %}</span>
     </span>
 {% endif %}
+
 {% for tag in tags %}
     {% if tag contains "tge" or tag contains "t3d" or tag contains "t2d" %}
     {% else %}
