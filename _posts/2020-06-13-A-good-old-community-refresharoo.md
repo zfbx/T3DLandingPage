@@ -1,8 +1,8 @@
 ---
 layout: post
 categories: News
-# Hotfix, version (T3D-X.Y.z | T2D-X.Y.z), Community
-tags: Community
+# Tag examples: hotfix, t3d-X.Y.z,  t2d-X.Y.z, community
+tags: community
 
 title:  "A good old community refresharoo"
 description: community update in regards to the repository, community, roles, landing page, docs, wiki, discord, forums, community project.

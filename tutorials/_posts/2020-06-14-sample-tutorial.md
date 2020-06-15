@@ -4,7 +4,7 @@ categories: Tutorials
 
 title:  "Sample Tutorial"
 author: steve
-tags: T3D-3.0 T3D-3.5 T3D-3.10.1
+tags: t3d-3.0 t3d-3.5 t3d-3.10.1
 description: Just the basics!
 ---
 
