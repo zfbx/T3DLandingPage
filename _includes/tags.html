@@ -1,8 +1,8 @@
-{% assign taglist = tags | join: " " %}
+{% assign taglist = include.tags | join: " " %}
 
 {% if taglist contains "t3d" %}
     <span class="badge badge-dark badge-t3d">T3D
-        {% for tag in tags %}
+        {% for tag in include.tags %}
             {% if tag contains "t3d" %}
                 {% assign newtag = tag | split: "-" %}
                 <a href="/tags/{{ tag }}"><span class="badge badge-dark">{{ newtag[1] | upcase }}</span></a>
@@ -13,7 +13,7 @@
 
 {% if taglist contains "t2d" %}
     <span class="badge badge-dark badge-t2d">T2D
-        {% for tag in tags %}
+        {% for tag in include.tags %}
             {% if tag contains "t2d" %}
                 {% assign newtag = tag | split: "-" %}
                 <a href="/tags/{{ tag }}"><span class="badge badge-dark">{{ newtag[1] | upcase }}</span></a>
@@ -24,7 +24,7 @@
 
 {% if taglist contains "tge" %}
     <span class="badge badge-dark badge-tge">TGE
-        {% for tag in tags %}
+        {% for tag in include.tags %}
             {% if tag contains "tge" %}
                 {% assign newtag = tag | split: "-" %}
                 <a href="/tags/{{ tag }}"><span class="badge badge-dark">{{ newtag[1] | upcase }}</span></a>
@@ -33,7 +33,7 @@
     </span>
 {% endif %}
 
-{% for tag in tags %}
+{% for tag in include.tags %}
     {% if tag contains "tge" or tag contains "t3d" or tag contains "t2d" %}
     <!-- stuff -->
     {% else %}
