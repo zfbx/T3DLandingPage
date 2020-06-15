@@ -2,7 +2,7 @@
 layout: tutorial
 title:  "Sample Tutorial"
 author: "Steve Yorkshire"
-tags: T3D-3.0 T3D-3.5 T3D-3.10.1 
+tags: T3D-3.0 T3D-3.5 T3D-3.10.1
 description: Just the basics!
 categories: Tutorials
 ---

@@ -2,6 +2,11 @@ name: Torque 3D
 root: https://torque3d.org
 permalink: /:categories/:title
 markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  input: GFM
+  auto_ids: true
+  toc_levels: 1..3
 wikiroot: https://wiki.torque3d.org
 forumsroot: https://forums.torque3d.org
 github: TorqueGameEngines/Torque3D
