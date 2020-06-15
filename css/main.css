@@ -301,3 +301,43 @@ html.dark-mode .btn-default:hover {
 html.dark-mode .jumbotron {
     background-color: #2b2b2b;
 }
+
+
+/* Code */
+code {
+    background-color: #2d2d2d;
+    padding: 3px;
+    border-radius: 2px;
+}
+code .n {
+    color: #ffffff;
+}
+code .nf {
+    color: #ffffff;
+}
+code .p { /* ( ) { } = ; */
+    color: #ffffff;
+}
+code .s { /* strings */
+    colorr: #ffffff;
+}
+
+/* Darkmode Code */
+
+html.dark-mode code {
+    background-color: #2d2d2d;
+    padding: 3px;
+    border-radius: 2px;
+}
+html.dark-mode code .n {
+    color: #ffffff;
+}
+html.dark-mode code .nf {
+    color: #ffffff;
+}
+html.dark-mode code .p { /* ( ) { } = ; */
+    color: #ffffff;
+}
+html.dark-mode code .s { /* strings */
+    colorr: #ffffff;
+}

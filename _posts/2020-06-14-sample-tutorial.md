@@ -13,6 +13,12 @@ Faking aircraft zooming overhead like all the cool FPS's have ... but let's expa
 
 ### Code
 ```cs
+%localvar = 42;
+$globalvar = "Bob";
+
+echo(%localvar);
+
+// Comment
 datablock StaticShapeData( bomberShapedata ) {
     category = "staticShape";
     shapeFile = "art/shapes/vehicles/bomber.dts";
