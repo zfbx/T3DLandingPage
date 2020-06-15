@@ -327,6 +327,16 @@ html.dark-mode .badge-dark {
     color: #212529 !important;
     background-color: #f8f9fa !important;
 }
+html.dark-mode .CodeMirror, html.dark-mode .editor-preview-side {
+    background-color: #222222;
+    color: #ffffff;
+}
+html.dark-mode .editor-toolbar a {
+    color: #c9cdd2!important;
+}
+html.dark-mode .editor-toolbar a.active, html.dark-mode  .editor-toolbar a:hover {
+    background: #3f3f3f;
+}
 
 /* Darkmode Code */
 html.dark-mode .highlight {
