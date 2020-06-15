@@ -67,9 +67,6 @@ span.date {
     color: gray;
     margin-right: 1em;
 }
-h4 a, h4 a:hover {
-    color: rgb(51, 51, 51);
-}
 a.media-subheading, a.media-subheading:hover {
     color: #666;
     font-style: italic;
@@ -142,6 +139,13 @@ pre.inline {
     padding-top: 70px;
     display: inline-block;
 }
+h4 a, h4 a:hover {
+    color: rgb(51, 51, 51);
+}
+h3 a {
+    color: #222222;
+    text-decoration: none;
+}
 img.feature, img.made-with-torque {
     width: 128px;
     border-radius: 3px;
@@ -170,10 +174,6 @@ table.versioning>tbody>tr>td:first-child {
     background-color: #990000;
     padding: 2px;
     margin: -2px;
-}
-h3 a {
-    color: #222222;
-    text-decoration: none;
 }
 .meta {
     margin-top: 10px;
@@ -307,6 +307,14 @@ html.dark-mode .dropdown-item:active {
 }
 html.dark-mode h3 a {
     color: #ffffff;
+}
+html.dark-mode h4 a, html.dark-mode h4 a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+html.dark-mode .card {
+    background-color: #333333;
+    border-color: #444444;
 }
 
 /* Darkmode Code */
