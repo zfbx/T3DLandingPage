@@ -19,5 +19,10 @@ layout: default
         {{ content }}
     </div>
 
+    {% if page.author %}
+        {% assign author = site.authors[page.author] %}
+        {% include  author.html %}
+    {% endif %}
+
     <!--<a href="/news"><i class="fa fa-angle-left"></i> Back to news archive</a>-->
 </div>
