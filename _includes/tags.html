@@ -1,5 +1,5 @@
 {% assign taglist = include.tags | join: " " %}
-
+<!-- {{ include.tags }} -->
 {% if taglist contains "t3d" %}
     <span class="badge badge-dark badge-t3d">T3D
         {% for tag in include.tags %}
