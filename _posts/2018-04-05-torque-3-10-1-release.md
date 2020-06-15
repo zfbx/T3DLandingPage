@@ -1,7 +1,8 @@
 ---
 layout: post
 categories: News
-tags: 
+# Hotfix, version (T3D-X.Y.z | T2D-X.Y.z), Community
+tags: Hotfix T3D-3.10.1
 
 title:  "Torque 3D 3.10.1 Hotfix Released!"
 description: Release notes for torque 3D 3.10.1

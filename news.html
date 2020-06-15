@@ -26,6 +26,9 @@ permalink: /news/
                     {% if author.name %}
                     {{ author.name }}
                     {% endif %}
+                    {% for tag in post.tags %}
+                    <a href="/tags/{{ tag }}"><span class="badge badge-dark">{{ tag }}</span></a>
+                    {% endfor %}</span>
                 </span>
                 <p>{{ post.content | strip_html | truncatewords: 50 }}...</p>
                 <!-- <a class="btn btn-primary" href="{{post.url}}">View Post</a> -->
