@@ -1,25 +1,31 @@
+{% if author.name %}
 <div class="card p-3 my-2">
-    <div id="author-content">
-        <h4>Author</h4>
-        <hr class="m-0">
-        <div itemprop="author" id="name-author"><strong>{{ author.name }}</strong></div>
-        <img itemprop="image" id="image-author" src="{{ author.image }}">
-        {% if author.about %}
-        <div id="about-author">{{ author.about }}</div>
-        {% endif %}
-        <div id="social-author">
-            {% if author.web %}
-            <a href="{{ author.web }}" title="website" class="text-dark"><i class="fa fa-globe fa"></i></a>
+    <div id="author-content d-flex flex-column">
+        <div class="flex-shrink-0">
+            {% if author.image %}
+            <img itemprop="image" style="height: 100px;" id="image-author" class="img-thumbnail" src="{{ author.image }}">
             {% endif %}
-            {% if author.github %}
-            <a href="{{ author.github }}" title="Github" class="text-dark"><i class="fa fa-github-square fa"></i></a>
+        </div>
+        <div class="flex-grow-1 p-2">
+            <div itemprop="author" id="name-author"><h4>{{ author.name }}</h4></div>
+            {% if author.about %}
+            <div id="about-author">{{ author.about }}</div>
             {% endif %}
-            {% if author.twitter %}
-            <a href="{{ author.twitter }}" title="Twitter" class="text-dark"><i class="fa fa-twitter-square fa"></i></a>
-            {% endif %}
-            {% if author.email %}
-            <a href="{{ author.email }}" title="Email" class="text-dark"><i class="fa fa-envelope fa"></i></a>
-            {% endif %}
+            <div id="social-author" style="font-size: 1.5rem;">
+                {% if author.web %}
+                <a href="{{ author.web }}" title="website" class="text-dark"><i class="fa fa-globe fa"></i></a>
+                {% endif %}
+                {% if author.github %}
+                <a href="{{ author.github }}" title="Github" class="text-dark"><i class="fa fa-github-square fa"></i></a>
+                {% endif %}
+                {% if author.twitter %}
+                <a href="{{ author.twitter }}" title="Twitter" class="text-dark"><i class="fa fa-twitter-square fa"></i></a>
+                {% endif %}
+                {% if author.email %}
+                <a href="{{ author.email }}" title="Email" class="text-dark"><i class="fa fa-envelope fa"></i></a>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
+{% endif %}

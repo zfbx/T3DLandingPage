@@ -316,6 +316,9 @@ html.dark-mode .card {
     background-color: #333333;
     border-color: #444444;
 }
+html.dark-mode .text-dark {
+    color: #ffffff;
+}
 
 /* Darkmode Code */
 html.dark-mode .highlight {
