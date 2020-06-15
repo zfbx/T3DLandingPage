@@ -304,7 +304,7 @@ html.dark-mode .jumbotron {
 
 
 /* Code */
-pre .highlight {
+.highlight {
     background-color: #2d2d2d;
     padding: 3px;
     border-radius: 2px;
@@ -335,7 +335,7 @@ code .err { /* $ */
 }
 
 /* Darkmode Code */
-html.dark-mode pre .highlight {
+html.dark-mode .highlight {
     background-color: #2d2d2d;
     padding: 3px;
     border-radius: 2px;
