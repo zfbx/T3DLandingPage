@@ -304,40 +304,63 @@ html.dark-mode .jumbotron {
 
 
 /* Code */
-code {
+pre .highlight {
     background-color: #2d2d2d;
     padding: 3px;
     border-radius: 2px;
 }
-code .n {
-    color: #ffffff;
+code {
+    color: #ccdcdc;
 }
-code .nf {
-    color: #ffffff;
+code .n { /* variables, globalvariables, bomberShapeData */
+    color: #f2777a;
 }
-code .p { /* ( ) { } = ; */
+code .nf { /* echo staticShapeData*/
+    color: #e1a6f2;
+}
+code .m { /* numbers */
+    color: #fca369;
+}
+code .p { /* ( ) { } = ; %*/
     color: #ffffff;
 }
 code .s { /* strings */
-    colorr: #ffffff;
+    color: #92d192;
+}
+code .c1 { /* comment */
+    color: #77787c;
+}
+code .err { /* $ */
+    color: #ffeea6;
 }
 
 /* Darkmode Code */
-
-html.dark-mode code {
+html.dark-mode pre .highlight {
     background-color: #2d2d2d;
     padding: 3px;
     border-radius: 2px;
 }
-html.dark-mode code .n {
-    color: #ffffff;
+html.dark-mode code {
+    color: #ccdcdc;
 }
-html.dark-mode code .nf {
-    color: #ffffff;
+html.dark-mode code .n { /* variables, globalvariables, bomberShapeData */
+    color: #f2777a;
 }
-html.dark-mode code .p { /* ( ) { } = ; */
-    color: #ffffff;
+html.dark-mode code .nf { /* echo staticShapeData*/
+    color: #e1a6f2;
+}
+html.dark-mode code .m { /* numbers */
+    color: #fca369;
+}
+html.dark-mode code .p { /* ( ) { } = ; %*/
+    color: #b3b9c5;
 }
 html.dark-mode code .s { /* strings */
-    colorr: #ffffff;
+    color: #92d192;
+}
+html.dark-mode code .c1 { /* comment */
+    color: #77787c;
+}
+html.dark-mode code .err { /* $ */
+    color: #ffeea6;
 }
