@@ -192,16 +192,29 @@ table.versioning>tbody>tr>td:first-child {
 .editor-toolbar.fullscreen, .CodeMirror-fullscreen {
     z-index: 10009; /* Fix it from hiding behind navbar*/
 }
+badge-t3d {
+    color: #ffffff;
+    background-color: #fc5788;
+}
+badge-t2d {
+    color: #ffffff;
+    background-color: #57aafc;
+}
+badge-tge {
+    color: #ffffff;
+    background-color: #99fc57;
+}
 
 
 /* Code */
 .highlight {
     background-color: #f2f1f7;
-    padding: 3px;
-    border-radius: 2px;
+    padding: 4px;
+    border-radius: 4px;
 }
 code {
     color: #353636;
+    line-height: 1em;
 }
 code .n { /* variables, globalvariables, bomberShapeData */
     color: #eb613a;
@@ -339,6 +352,18 @@ html.dark-mode .editor-toolbar a {
 }
 html.dark-mode .editor-toolbar a.active, html.dark-mode  .editor-toolbar a:hover {
     background: #3f3f3f;
+}
+html.dark-mode badge-t3d {
+    color: #ffffff;
+    background-color: #fc5788;
+}
+html.dark-mode badge-t2d {
+    color: #ffffff;
+    background-color: #57aafc;
+}
+html.dark-mode badge-tge {
+    color: #ffffff;
+    background-color: #99fc57;
 }
 
 /* Darkmode Code */

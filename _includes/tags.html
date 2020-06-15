@@ -1,0 +1,36 @@
+{% if post.tags contains "t3d" %}
+    <span class="badge badge-dark badge-t3d">T3D
+        {% for tag in post.tags %}
+        {% if tag contains "t3d" %}
+            {% assign newtag = tag | split: "-" %}
+            <a href="/tags/{{ tag }}"><span class="badge badge-dark">{{ newtag[1] | upcase }}</span></a>
+        {% endif %}
+        {% endfor %}</span>
+    </span>
+{% endif}
+{% if post.tags contains "t2d" %}
+    <span class="badge badge-dark badge-t2d">T2D
+        {% for tag in post.tags %}
+        {% if tag contains "t2d" %}
+            {% assign newtag = tag | split: "-" %}
+            <a href="/tags/{{ tag }}"><span class="badge badge-dark">{{ newtag[1] | upcase }}</span></a>
+        {% endif %}
+        {% endfor %}</span>
+    </span>
+{% endif}
+{% if post.tags contains "tge" %}
+    <span class="badge badge-dark badge-tge">TGE
+        {% for tag in post.tags %}
+        {% if tag contains "tge" %}
+            {% assign newtag = tag | split: "-" %}
+            <a href="/tags/{{ tag }}"><span class="badge badge-dark">{{ newtag[1] | upcase }}</span></a>
+        {% endif %}
+        {% endfor %}</span>
+    </span>
+{% endif}
+{% for tag in post.tags %}
+{% if tag contains "tge" or tag contains "t3d" or tag contains "t2d" %}
+{% else %}
+    <a href="/tags/{{ tag }}"><span class="badge badge-dark">{{ tag | upcase }}</span></a>
+{% endif %}
+{% endfor %}</span>
