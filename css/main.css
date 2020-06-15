@@ -189,6 +189,9 @@ table.versioning>tbody>tr>td:first-child {
     display: block;
     cursor: pointer;
 }
+.editor-toolbar.fullscreen, .CodeMirror-fullscreen {
+    z-index: 10009; /* Fix it from hiding behind navbar*/
+}
 
 
 /* Code */
