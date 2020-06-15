@@ -178,6 +178,18 @@ h3 a {
 .meta {
     margin-top: 10px;
 }
+.btn-default {
+    background-color: #dbdbdb;
+}
+.btn-default:hover {
+    color: #4b4b4b; 
+}
+#darkmode-toggle {
+    color: #222222;
+    display: block;
+    cursor: pointer;
+}
+
 
 /* Code */
 .highlight {
@@ -215,15 +227,7 @@ code .err { /* $ */
  * Darkmode
  */
 
-.darkmode-toggle-container {
-    margin-left: auto;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-}
-#darkmode-toggle {
-    display: block;
-    cursor: pointer;
+html.dark-mode #darkmode-toggle {
     color: #d6d6d6;
 }
 html.dark-mode input[type=text], html.dark-mode textarea {
@@ -269,8 +273,7 @@ html.dark-mode .btn-default {
     background-color: #313030;
 }
 html.dark-mode .btn-default:hover {
-    color: #b5babd;
-    
+    color: #b5babd; 
 }
 html.dark-mode .jumbotron {
     background-color: #2b2b2b;
