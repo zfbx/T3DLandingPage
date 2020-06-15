@@ -9,8 +9,8 @@ title: Tutorials
 
 <div class="container">
     <ul class="list-unstyled">
-    {% for tutorial in site.tutorials %}
-        {% include tutorial.html tutorial=tutorial %}
+    {% for post in site.categories[tutorial] %}
+        {% include tutorial.html tutorial=post %}
     {% endfor %}
     </ul>
 </div>
