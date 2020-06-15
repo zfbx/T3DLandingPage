@@ -2,6 +2,7 @@
 layout: post
 title:  "A good old community regresharoo"
 categories: News
+tags: 
 ---
 
 So a number of complaints, issues, grievances, dismays, challenges, hangups, roadbumps or whatever other words for problems or inconveniences have been sorta... around, but haven't really been enough of an issue to frontline with the limited time everyone has to work on stuff.
