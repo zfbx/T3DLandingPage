@@ -323,6 +323,10 @@ html.dark-mode .img-thumbnail {
     background-color: #3f3f3f;
     border-color: #525252;
 }
+html.dark-mode .badge-dark {
+    color: #212529 !important;
+    background-color: #f8f9fa !important;
+}
 
 /* Darkmode Code */
 html.dark-mode .highlight {
