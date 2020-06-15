@@ -219,6 +219,10 @@ table.versioning>tbody>tr>td:first-child {
     min-width: 8em;
 }
 
+.navbar-brand img {
+    background-color: #990000;
+}
+
 /*-----------------------------------------------------------------------------
  * Posts
  */
@@ -301,6 +305,17 @@ html.dark-mode .btn-default:hover {
 html.dark-mode .jumbotron {
     background-color: #2b2b2b;
 }
+
+html.dark-mode .navbar {
+    background-color: #343a40 !important;
+}
+html.dark-mode .navbar-brand img {
+    background-color: unset;
+}
+
+
+
+
 
 
 /* Code */
