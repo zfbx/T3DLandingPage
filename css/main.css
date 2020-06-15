@@ -1,120 +1,91 @@
 body {
     overflow-y: scroll;
 }
-
 .table.borderless>tbody>tr>td {
     padding-top: 1em;
 }
-
 .table.borderless>tbody>tr, .table.borderless>tbody>tr>td {
     border: none;
     border-bottom: 1px solid #ddd;
 }
-
 .table.borderless>tbody>tr:last-child, .table.borderless>tbody>tr:last-child>td {
     border: none;
 }
-
 .contact td:first-child {
     padding-right: 1em;
     text-align: right;
 }
-
-/*.container {
-  max-width: 760px!important;
-}*/
-
 .site .navbar-default {
     background-color: white;
 }
-
 .site p {
     margin-top: 10px;
 }
-
 .commit p {
     text-align: left;
 }
-
 .site .media:first-child {
     margin-top: 15px;
 }
-
 .site .carousel-control.right, .site .carousel-control.left {
     background: none;
     background-image: none;
     opacity: 1.0;
     text-shadow: none;
 }
-
 .site .carousel-indicators {
     bottom: -40px;
 }
-
 .carousel-inner a {
     color: white;
 }
-
 .site .carousel-indicators li {
     border-radius: 3px;
 }
-
 .site .carousel-inner .item {
     width: 80%;
     margin-left: 10%;
 }
-
 .link-muted {
     color: #999 !important;
 }
-
 #torque-logo {
     width: 140px;
 }
-
 @media (max-width: 768px) {
     .jumbotron.banner .row, .jumbotron.banner .row p {
         text-align: center;
     }
 }
-
 .jumbotron {
     border-radius: 0 !important;
 }
-
 span.post-title {
     font-weight: bold;
 }
-
 span.date {
     color: gray;
     margin-right: 1em;
 }
-
 h4 a, h4 a:hover {
     color: rgb(51, 51, 51);
 }
-
 a.media-subheading, a.media-subheading:hover {
     color: #666;
     font-style: italic;
     font-size: 90%;
 }
-
 .dropdown-toggle i {
     margin-left: 0.3em;
 }
-
 .site {
     margin: 0 auto 2em;
     line-height: 1.5em;
 }
-
 .site .banner {
     background: #990000;
     color: white;
 }
-
 .break {
     height: 144px;
     width: 760px;
@@ -123,201 +94,90 @@ a.media-subheading, a.media-subheading:hover {
     text-align: center;
     margin-top: 2em;
 }
-
 .break img {
     border-radius: 3px;
 }
-
 .site .banner .col-sm-4 {
     text-align: center;
 }
-
 .site .carousel-control i {
     position: absolute;
     top: 50%;
 }
-
 .footer {
     font-size: 80%;
     color: #666;
     margin-top: 2em;
     overflow: hidden;
 }
-
 .footer .rss img {
     border: 0;
 }
-
 .site ol ol {
     list-style-type: lower-alpha;
 }
-
 pre.inline {
     display: inline;
     padding: 3px;
     margin: 0 5px;
 }
-
 .commit {
     margin-bottom: 10px;
 }
-
 .commit p {
     margin: 0;
 }
-
 .fa-external-link {
     font-size: 75%;
 }
-
-/*-----------------------------------------------------------------------------
- * Static pages
- */
-
 .page h3 {
     color: #555;
 }
-
 .page .banner {
     margin-top: 1em;
 }
-
 .banner h2 {
     /* Fixes scrolling to anchors with the fixed navbar. */
     margin-top: -60px;
     padding-top: 70px;
     display: inline-block;
 }
-
 img.feature, img.made-with-torque {
     width: 128px;
     border-radius: 3px;
 }
-
 @media (max-width: 360px) {
     img.feature, img.made-with-torque {
         width: 96px;
     }
 }
-
 img.history {
     margin: 1em;
 }
-
 table.history>tbody>tr>td:first-child {
     font-weight: bold;
     width: 4em;
     display: inline-block;
 }
-
 table.download>tbody>tr>td:first-child {
     min-width: 10em;
     font-weight: bold;
 }
-
 table.versioning>tbody>tr>td:first-child {
     min-width: 8em;
 }
-
 .navbar-brand img {
     background-color: #990000;
     padding: 2px;
+    margin: -2px;
 }
-
-/*-----------------------------------------------------------------------------
- * Posts
- */
-
+h3 a {
+    color: #222222;
+    text-decoration: none;
+}
 .meta {
     margin-top: 10px;
 }
-
-/*-----------------------------------------------------------------------------
- * Darkmode
- */
-
-.darkmode-toggle-container {
-    margin-left: auto;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-}
-
-#darkmode-toggle {
-    display: block;
-    cursor: pointer;
-    color: #d6d6d6;
-}
-
-html.dark-mode input[type=text], html.dark-mode textarea {
-    border-color: rgba(0, 0, 0, 0.8);
-    background-color: #1d1d1d;
-    color: #d6d6d6;
-}
-
-html.dark-mode body {
-    background-color: #121212;
-    color: #d6d6d6;
-}
-
-html.dark-mode nav {
-    background-color: #2d2d2d !important;
-}
-
-html.dark-mode .card {
-    border-color: rgba(0, 0, 0, 0.8);
-}
-
-html.dark-mode .card-body {
-    background-color: #282828;
-}
-
-html.dark-mode .card-footer {
-    background-color: #1d1d1d;
-}
-
-html.dark-mode .badge-inf {
-    background-color: #1d1d1d;
-    color: #d6d6d6;
-}
-
-html.dark-mode .nav-tabs .nav-link.active {
-    color: #d6d6d6;
-    background-color: #1d1d1d;
-}
-
-html.dark-mode #darkmode-modal .modal-content {
-    background-color: #1d1d1d;
-}
-
-html.dark-mode #darkmode-modal button.close {
-    color: #d6d6d6;
-}
-
-html.dark-mode .btn-default {
-    color: #96999b;
-    background-color: #313030;
-}
-html.dark-mode .btn-default:hover {
-    color: #b5babd;
-    
-}
-
-html.dark-mode .jumbotron {
-    background-color: #2b2b2b;
-}
-
-html.dark-mode .navbar {
-    background-color: #343a40 !important;
-}
-html.dark-mode .navbar-brand img {
-    background-color: unset;
-}
-
-
-
-
-
 
 /* Code */
 .highlight {
@@ -348,6 +208,102 @@ code .c1 { /* comment */
 }
 code .err { /* $ */
     color: #ffeea6;
+}
+
+
+/*-----------------------------------------------------------------------------
+ * Darkmode
+ */
+
+.darkmode-toggle-container {
+    margin-left: auto;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+#darkmode-toggle {
+    display: block;
+    cursor: pointer;
+    color: #d6d6d6;
+}
+html.dark-mode input[type=text], html.dark-mode textarea {
+    border-color: rgba(0, 0, 0, 0.8);
+    background-color: #2b2b2b;
+    color: #d6d6d6;
+}
+html.dark-mode body {
+    background-color: #222222;
+    color: #d6d6d6;
+}
+html.dark-mode nav {
+    background-color: #2d2d2d !important;
+}
+html.dark-mode .card {
+    border-color: rgba(0, 0, 0, 0.8);
+}
+html.dark-mode .card-body {
+    background-color: #282828;
+}
+html.dark-mode .card-footer {
+    background-color: #1d1d1d;
+}
+html.dark-mode .badge-inf {
+    background-color: #1d1d1d;
+    color: #d6d6d6;
+}
+html.dark-mode .nav-tabs .nav-link.active {
+    color: #d6d6d6;
+    background-color: #1d1d1d;
+}
+
+html.dark-mode #darkmode-modal .modal-content {
+    background-color: #1d1d1d;
+}
+
+html.dark-mode #darkmode-modal button.close {
+    color: #d6d6d6;
+}
+
+html.dark-mode .btn-default {
+    color: #96999b;
+    background-color: #313030;
+}
+html.dark-mode .btn-default:hover {
+    color: #b5babd;
+    
+}
+html.dark-mode .jumbotron {
+    background-color: #2b2b2b;
+}
+html.dark-mode .navbar {
+    background-color: #343a40 !important;
+}
+html.dark-mode .navbar-brand {
+    color: #ffffff
+}
+html.dark-mode .navbar-brand img {
+    background-color: unset;
+}
+html.dark-mode .nav-link {
+    color: #ffffff !important;
+}
+html.dark-mode .dropdown-menu {
+    background-color: #222222;
+    color: #ffffff !important;
+    box-shadow: 1px 2px 2px #343a40, -1px 2px 2px #343a40;
+    
+}
+html.dark-mode .dropdown-item {
+    color: #ffffff !important;
+}
+html.dark-mode .dropdown-item:hover, 
+html.dark-mode .dropdown-item:select, 
+html.dark-mode .dropdown-item:active {
+    color: #ffffff !important;
+    color: #343a40 !important;
+}
+html.dark-mode h3 a {
+    color: #ffffff;
 }
 
 /* Darkmode Code */
