@@ -317,7 +317,11 @@ html.dark-mode .card {
     border-color: #444444;
 }
 html.dark-mode .text-dark {
-    color: #ffffff;
+    color: #ffffff !important;
+}
+html.dark-mode .img-thumbnail {
+    background-color: #3f3f3f;
+    border-color: #525252;
 }
 
 /* Darkmode Code */

@@ -1,12 +1,12 @@
 {% if author.name %}
 <div class="card p-3 my-2">
-    <div id="author-content d-flex flex-column">
+    <div id="author-content" class="d-flex flex-row">
         <div class="flex-shrink-0">
             {% if author.image %}
             <img itemprop="image" style="height: 100px;" id="image-author" class="img-thumbnail" src="{{ author.image }}">
             {% endif %}
         </div>
-        <div class="flex-grow-1 p-2">
+        <div class="pl-3">
             <div itemprop="author" id="name-author"><h4>{{ author.name }}</h4></div>
             {% if author.about %}
             <div id="about-author">{{ author.about }}</div>

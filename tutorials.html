@@ -4,9 +4,11 @@ title: Tutorials
 permalink: /tutorials/
 ---
 
-<div class="banner"><div class="container">
-    <h2>Tutorials</h2>
-</div></div>
+<div class="banner">
+    <div class="container my-3">
+        <h2>Tutorials</h2>
+    </div>
+</div>
 
 <div class="container">
     {% for post in site.categories.Tutorials %}
@@ -20,12 +22,15 @@ permalink: /tutorials/
             </a></div>--> 
             <div class="col-md-12">
             <h4><a href="{{post.url}}">{{ post.title }}</a></h4>
-            <span class="info">{{ post.date | date: "%B %-d, %Y" }} - {{ author.name }} 
+            <span class="info">{{ post.date | date: "%B %-d, %Y" }} - 
+                {% if author.name %}
+                {{ author.name }} 
+                {% endif %}
                 {% for tag in post.tags %}
-                <a href="/tags/{{ tag }}"><span class="badge badge-pill badge-light">{{ tag }}</span></a>
+                <a href="/tags/{{ tag }}"><span class="badge badge-light">{{ tag }}</span></a>
                 {% endfor %}</span>
             <p>{{ post.description }}</p>
-            <a class="btn btn-primary" href="{{post.url}}">Go to Tutorial</a>
+            <!--<a class="btn btn-primary" href="{{post.url}}">Go to Tutorial</a>-->
             </div>
         </div>
     {% endfor %}

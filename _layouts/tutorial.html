@@ -9,9 +9,12 @@ layout: default
     <div class="container my-3">
         <h2>{{page.title}}</h2>
         <span class="meta pull-right">{{ page.date | date: "%B %-d, %Y"}}</span>
-        <span class="info">Created by {{ author.name }} 
+        <span class="info d-block py-2">
+            {% if author.name %}
+            Created by {{ author.name }}  
+            {% endif %}
             {% for tag in page.tags %}
-            <span class="badge badge-light">{{ tag }}</span>
+            <a href="/tags/{{ tag }}"><span class="badge badge-light">{{ tag }}</span></a>
             {% endfor %}
         </span>
     </div>

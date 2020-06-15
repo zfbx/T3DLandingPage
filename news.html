@@ -4,15 +4,32 @@ title: News
 permalink: /news/
 ---
 
-<div class="banner"><div class="container">
-    <h2>News Archive</h2>
-</div></div>
+<div class="banner">
+    <div class="container my-3">
+        <h2>News</h2>
+    </div>
+</div>
 
 <div class="container">
-    <p></p>
-    <ul class="list-unstyled">
     {% for post in site.categories.News %}
-        {% include newsitem.html post=post %}
+    {% if post.author %}
+    {% assign author = site.authors[post.author] %}
+    {% endif %}
+    <div class="row py-3 card">
+        <!--<div class="col-md-7">
+              <a href="#">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+              </a></div>-->
+        <div class="col-md-12">
+            <h3><a href="{{post.url}}">{{include.post.title}}</a></h3>
+            <span class="date">{{include.post.date | date: "%B %-d, %Y"}} -
+                {% if author.name %}
+                {{ author.name }}
+                {% endif %}
+            </span>
+            <p>{{ include.post.content | strip_html | truncatewords: 50 }}...</p>
+            <!-- <a class="btn btn-primary" href="{{post.url}}">View Post</a> -->
+        </div>
+    </div>
     {% endfor %}
-    </ul>
 </div>
