@@ -1,15 +1,25 @@
-<div class="w3-card-2">
+<div class="card p-3 my-2">
     <div id="author-content">
-        <h3>Author</h3>
-        <hr>
+        <h4>Author</h4>
+        <hr class="m-0">
         <div itemprop="author" id="name-author"><strong>{{ author.name }}</strong></div>
         <img itemprop="image" id="image-author" src="{{ author.image }}">
+        {% if author.about %}
         <div id="about-author">{{ author.about }}</div>
+        {% endif %}
         <div id="social-author">
-            <a href="{{ author.web }}" title="website"><i class="fa fa-globe fa"></i></a>
-            <a href="{{ author.github }}" title="Github"><i class="fa fa-github-square fa"></i></a>
-            <a href="{{ author.twitter }}" title="Twitter"><i class="fa fa-twitter-square fa"></i></a>
-            <a href="{{ author.email }}" title="Email"><i class="fa fa-envelope-square fa"></i></a>
+            {% if author.web %}
+            <a href="{{ author.web }}" title="website" class="text-dark"><i class="fa fa-globe fa"></i></a>
+            {% endif %}
+            {% if author.github %}
+            <a href="{{ author.github }}" title="Github" class="text-dark"><i class="fa fa-github-square fa"></i></a>
+            {% endif %}
+            {% if author.twitter %}
+            <a href="{{ author.twitter }}" title="Twitter" class="text-dark"><i class="fa fa-twitter-square fa"></i></a>
+            {% endif %}
+            {% if author.email %}
+            <a href="{{ author.email }}" title="Email" class="text-dark"><i class="fa fa-envelope fa"></i></a>
+            {% endif %}
         </div>
     </div>
 </div>
