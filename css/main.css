@@ -193,33 +193,33 @@ table.versioning>tbody>tr>td:first-child {
 
 /* Code */
 .highlight {
-    background-color: #2d2d2d;
+    background-color: #f2f1f7;
     padding: 3px;
     border-radius: 2px;
 }
 code {
-    color: #ccdcdc;
+    color: #353636;
 }
 code .n { /* variables, globalvariables, bomberShapeData */
-    color: #f2777a;
+    color: #eb613a;
 }
 code .nf { /* echo staticShapeData*/
-    color: #e1a6f2;
+    color: #fe79a8;
 }
 code .m { /* numbers */
-    color: #fca369;
+    color: #5f4bff;
 }
 code .p { /* ( ) { } = ; %*/
-    color: #ffffff;
+    color: #15156f;
 }
 code .s { /* strings */
-    color: #92d192;
+    color: #26a77e;
 }
 code .c1 { /* comment */
-    color: #77787c;
+    color: #a19ba5;
 }
 code .err { /* $ */
-    color: #ffeea6;
+    color: #f2a648;
 }
 
 
