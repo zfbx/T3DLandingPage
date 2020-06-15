@@ -5,3 +5,4 @@ markdown: kramdown
 wikiroot: https://wiki.torque3d.org
 forumsroot: https://forums.torque3d.org
 github: TorqueGameEngines/Torque3D
+keep_files: [img, fonts, css, js]

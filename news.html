@@ -1,16 +1,18 @@
 ---
 layout: page
-title: Tutorials
+title: News
+permalink: /news/
 ---
 
 <div class="banner"><div class="container">
-    <h2>Tutorials</h2>
+    <h2>News Archive</h2>
 </div></div>
 
 <div class="container">
+    <p></p>
     <ul class="list-unstyled">
-    {% for post in site.categories.Tutorials %}
-        {% include tutorial.html post=post %}
+    {% for post in site.categories.News %}
+        {% include newsitem.html post=post %}
     {% endfor %}
     </ul>
 </div>
