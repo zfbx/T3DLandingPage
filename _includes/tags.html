@@ -35,6 +35,7 @@
 
 {% for tag in tags %}
     {% if tag contains "tge" or tag contains "t3d" or tag contains "t2d" %}
+    <!-- stuff -->
     {% else %}
         <a href="/tags/{{ tag }}"><span class="badge badge-dark">{{ tag | upcase }}</span></a>
     {% endif %}
