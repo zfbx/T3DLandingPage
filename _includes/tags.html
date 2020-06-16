@@ -5,7 +5,7 @@
         {% for tag in include.tags %}
             {% if tag contains "t3d" %}
                 {% assign newtag = tag | split: "-" %}
-                <a href="/tags/{{ tag }}"><span class="badge badge-dark">{{ newtag[1] | upcase }}</span></a>
+                <a href="/tags/{{ tag }}"><span class="badge badge-light">{{ newtag[1] | upcase }}</span></a>
             {% endif %}
         {% endfor %}
     </span>
@@ -16,7 +16,7 @@
         {% for tag in include.tags %}
             {% if tag contains "t2d" %}
                 {% assign newtag = tag | split: "-" %}
-                <a href="/tags/{{ tag }}"><span class="badge badge-dark">{{ newtag[1] | upcase }}</span></a>
+                <a href="/tags/{{ tag }}"><span class="badge badge-light">{{ newtag[1] | upcase }}</span></a>
             {% endif %}
         {% endfor %}
     </span>
@@ -27,7 +27,7 @@
         {% for tag in include.tags %}
             {% if tag contains "tge" %}
                 {% assign newtag = tag | split: "-" %}
-                <a href="/tags/{{ tag }}"><span class="badge badge-dark">{{ newtag[1] | upcase }}</span></a>
+                <a href="/tags/{{ tag }}"><span class="badge badge-light">{{ newtag[1] | upcase }}</span></a>
             {% endif %}
         {% endfor %}
     </span>

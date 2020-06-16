@@ -214,7 +214,8 @@ table.versioning>tbody>tr>td:first-child {
 }
 code {
     color: #353636;
-    line-height: 1em;
+    -webkit-appearance: textarea;
+    line-height: 1.1;
 }
 code .n { /* variables, globalvariables, bomberShapeData */
     color: #eb613a;

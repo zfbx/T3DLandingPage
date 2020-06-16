@@ -9,10 +9,12 @@ layout: default
     <div class="container my-3">
         <h2>{{page.title}}</h2>
         <span class="meta pull-right">{{ page.date | date: "%B %-d, %Y"}}</span>
-        <span class="info d-block py-2">
-            {% if author.name %}
+        {% if author.name %}
+        <span id="postauthor" class="info d-block pt-2">
             Created by {{ author.name }}  
-            {% endif %}
+        </span>
+        {% endif %}
+        <span id="posttags" class="info d-block py-2">
             {% include tags.html tags=page.tags %}
         </span>
     </div>
