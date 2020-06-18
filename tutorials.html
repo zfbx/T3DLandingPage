@@ -26,9 +26,13 @@ permalink: /tutorials/
                 {% if author.name %}
                     {{ author.name }} 
                 {% endif %}
+            </span>
+            <span class="d-sm-block d-md-inline">
                 {% include tags.html tags=post.tags %}
             </span>
-            <p>{{ post.description }}</p>
+            <span class="postdesc d-block">
+                <p>{{ post.description }}</p>
+            </span>
             <!--<a class="btn btn-primary" href="{{post.url}}">Go to Tutorial</a>-->
             </div>
         </div>
