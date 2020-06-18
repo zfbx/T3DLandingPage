@@ -63,7 +63,7 @@ title:
                 bottom line to meet.
             </p>
             <center>
-                <a class="btn btn-default" href="https://github.com/{{ site.github }}/blob/Preview4_0/CONTRIBUTING.md">
+                <a class="btn btn-default" href="https://github.com/{{ site.t3dgithub }}/blob/Preview4_0/CONTRIBUTING.md">
                     Get involved
                     <i class="fa fa-angle-right"></i>
                 </a>
@@ -92,9 +92,9 @@ title:
         <div class="col-sm-4">
             <h2>Quick links</h2>
             <ul id="quick-links" class="list-unstyled">
-                <li><a href="https://github.com/{{ site.github }}/issues/new">Report an issue or suggest changes</a>
+                <li><a href="https://github.com/{{ site.t3dgithub }}/issues/new">Report an issue or suggest changes</a>
                 </li>
-                <li><a href="https://github.com/{{ site.github }}/issues?labels=Final+review">Changes for final
+                <li><a href="https://github.com/{{ site.t3dgithub }}/issues?labels=Final+review">Changes for final
                         review</a></li>
                 <li><a href="http://t3dci.org">Builds and CI</a></li>
                 <li><a href="{{ site.forumsroot }}/viewforum.php?f=15">Forum News</a></li>
@@ -160,7 +160,7 @@ title:
         }
         loadSlideImages();
 
-        $.get('https://api.github.com/repos/{{ site.github }}/commits')
+        $.get('https://api.github.com/repos/{{ site.t3dgithub }}/commits')
             .done(function (commits) {
                 var out = "";
                 for (var i = 0; i < 5; i++) {
@@ -169,11 +169,11 @@ title:
                 $('#activity-loading').html(out)
             });
 
-        $.get('https://api.github.com/repos/{{ site.github }}/tags')
+        $.get('https://api.github.com/repos/{{ site.t3dgithub }}/tags')
             .done(function (releases) {
                 var latest = releases[0];
                 $('<li/>').append($('<a/>')
-                    .attr('href', 'https://github.com/{{ site.github }}/releases/tag/' + latest.name)
+                    .attr('href', 'https://github.com/{{ site.t3dgithub }}/releases/tag/' + latest.name)
                     .html('Download ' + latest.name)
                 ).prependTo('#quick-links');
             })

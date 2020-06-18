@@ -32,15 +32,15 @@ So, for our list of ever-important helpers that got the fixes put together that 
 Let alone those that have helped test this stuff while it was integrated into development so we know it's all quite solid!
 
 And here's the changelog:
-[#2030](https://github.com/{{ site.github }}/pull/2030) VS2017 compiler workaround
-[#2123](https://github.com/{{ site.github }}/pull/2123) Fix forest editor failing to load forest
-[#2002](https://github.com/{{ site.github }}/pull/2002) VolumetricFog memory leak fix
-[#2014](https://github.com/{{ site.github }}/pull/2014) Solves issue with getDesktopResolution and Windows 10 Creator update
-[#1959](https://github.com/{{ site.github }}/pull/1959) Does better sanity checking on cleanup for the splash screen closing in SDL
-[#2106](https://github.com/{{ site.github }}/pull/2106) Fixed a typo where the value of outBytesWritten was being clamped incorrectly
-[#2238](https://github.com/{{ site.github }}/pull/2238) Makes it so the SDL directory files aren't copied during a template install
+[#2030](https://github.com/{{ site.t3dgithub }}/pull/2030) VS2017 compiler workaround
+[#2123](https://github.com/{{ site.t3dgithub }}/pull/2123) Fix forest editor failing to load forest
+[#2002](https://github.com/{{ site.t3dgithub }}/pull/2002) VolumetricFog memory leak fix
+[#2014](https://github.com/{{ site.t3dgithub }}/pull/2014) Solves issue with getDesktopResolution and Windows 10 Creator update
+[#1959](https://github.com/{{ site.t3dgithub }}/pull/1959) Does better sanity checking on cleanup for the splash screen closing in SDL
+[#2106](https://github.com/{{ site.t3dgithub }}/pull/2106) Fixed a typo where the value of outBytesWritten was being clamped incorrectly
+[#2238](https://github.com/{{ site.t3dgithub }}/pull/2238) Makes it so the SDL directory files aren't copied during a template install
 
 I demand links!
-Quite so! You can find the release page on the github, as usual, [here](https://github.com/{{ site.github }}/releases/tag/v3.10.1).
+Quite so! You can find the release page on the github, as usual, [here](https://github.com/{{ site.t3dgithub }}/releases/tag/v3.10.1).
 
 Expect the MacOS binaries tomorrow.

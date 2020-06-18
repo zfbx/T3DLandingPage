@@ -9,27 +9,34 @@ kramdown:
     toc_levels: 1..3
 wikiroot: https://wiki.torque3d.org
 forumsroot: https://forums.torque3d.org
-github: TorqueGameEngines/Torque3D
-keep_files: [img, fonts, css, js]
+t3dgithub: TorqueGameEngines/Torque3D
+t2dgithub: TorqueGameEngines/Torque2D
+keep_files: [img, fonts, css/font-awesome.min.css, css/simplemde.min.css, js]
 authors:
     areloch:
         name: Jeff
         about:
-        email: mailto:test@emample.com
+        email: 
+        forumid: 53
         web: https://google.com
-        github: https://github.com/areloch
+        github: areloch
+        twitter: ghc_games
         image: https://avatars1.githubusercontent.com/u/2553124?s=460&u=d36cefba23f6f6feb23ec51eb9da4604beae5106&v=4
     zfbx:
         name: Tony
         about: Just your average programmer who specializes in web technologies.
         email: 
+        forumid: 886
         web: https://bunny.cc
-        github: https://github.com/zfbx
+        github: zfbx
+        twitter: zfbTony
         image: https://avatars0.githubusercontent.com/u/1414927?s=460&u=c7a675e29d0fe1b0c5f07e861c3960c49e03b91b&v=4
     steve:
         name: Steve Yorkshire
         about:
         email:
-        web:
+        forumid: 55
+        web: https://yorkshirerifles.com/
         github:
-        image:
+        twitter: Steve_Yorkshire
+        image: https://pbs.twimg.com/profile_images/595949911872512001/dtsx77KY_400x400.jpg

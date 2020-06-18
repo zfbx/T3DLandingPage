@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -13,7 +12,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/simplemde.min.css">
     <link rel="stylesheet" href="/css/main.css">
@@ -80,7 +79,7 @@
                             </div>
                         </li>
 
-<!--
+                        <!--
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="/committee" id="committeeDropdownMenuLink"
                                 role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -116,14 +115,13 @@
                             <div class="dropdown-menu" aria-labelledby="communityDropdownMenuLink">
                                 <a class="dropdown-item" href="{{ site.forumsroot }}/"> Forums</a>
                                 <a class="dropdown-item" href="{{ site.forumsroot }}/viewforum.php?f=8"> Blogs</a>
-                                <a class="dropdown-item" target="_blank"
-                                    href="https://discord.gg/wz2ZrRH"><i
+                                <a class="dropdown-item" target="_blank" href="https://discord.gg/wz2ZrRH"><i
                                         class="fa fa-external-link"></i> Discord</a>
                                 <a class="dropdown-item" target="_blank" href="https://twitter.com/Torque_3D_MIT"><i
                                         class="fa fa-external-link"></i> Twitter</a>
                                 <a class="dropdown-item" target="_blank" href="https://www.facebook.com/Torque3D"><i
                                         class="fa fa-external-link"></i> Facebook</a>
-                                
+
                                 <a class="dropdown-item" target="_blank" class="link-muted"
                                     href="http://www.garagegames.com/community/forums"><i
                                         class="fa fa-external-link"></i> Old forums</a>
@@ -144,31 +142,66 @@
             </div>
         </nav>
 
+
         {{ content }}
 
-        <div class="container">
-            <div class="footer">
-                <table class="contact">
-                    <tr>
-                        <td></td>
-                        <td><span id="darkmode-toggle" style="cursor: pointer;text-decoration:underline">Dark
-                                Mode</span></td>
-                    </tr>
-                    <tr>
-                        <td>Visit us on GitHub</td>
-                        <td><a href="https://github.com/{{ site.github }}">github.com/{{ site.github }}</a></td>
-                    </tr>
-                    <tr>
-                        <td>or on the forums</td>
-                        <td><a href="{{ site.forumsroot }}">{{ site.forumsroot }}</a></td>
-                    </tr>
-                    <!-- originally designed by eightyeight - heavily modified by zfbx -->
-                    <!-- Additional customizations added by zfbx (Darkmode)-->
-                </table>
+
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <img class="mb-2" src="/img/torque.png" alt="" width="24" height="24">
+                    <span>Torque</span>
+                    <small class="d-block mb-3 text-muted">© 2012-2020 by <br />
+                        <a href="https://github.com/{{ site.t3dgithub }}/" target="_blank">
+                            Contributors 
+                        </a>
+                    </small>
+                    <span>
+                        <span id="darkmode-toggle" style="cursor: pointer;text-decoration:underline">
+                            Dark Mode
+                        </span>
+                    </span>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Torque 3D</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="https://github.com/{{ site.t3dgithub }}" target="_blank">
+                            T3D Github <i class="fa fa-external-link"></i></a>
+                        </li>
+                        <li><a class="text-muted" href="#">Features</a></li>
+                        <li><a class="text-muted" href="#">Roadmap</a></li>
+                        <li><a class="text-muted" href="#">History</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Torque 2D</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="https://github.com/{{ site.t2dgithub }}" target="_blank">
+                            T2D Github <i class="fa fa-external-link"></i></a>
+                        </li>
+                        <li><a class="text-muted" href="#">Features</a></li>
+                        <li><a class="text-muted" href="#">Roadmap</a></li>
+                        <li><a class="text-muted" href="#">History</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Social</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#" target="_blank">
+                            Discord <i class="fa fa-external-link"></i></a>
+                        </li>
+                        <li><a class="text-muted" href="#" target="_blank">
+                            Twitter <i class="fa fa-external-link"></i></a>
+                        </li>
+                        <li><a class="text-muted" href="{{ site.forumsroot }}" target="_blank">
+                            Forums <i class="fa fa-external-link"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
+            <!-- Design and code by Tony (zfbx) & Bootstrap -->
+        </footer>
+
     </div>
-
 </body>
-
 </html>
