@@ -33,8 +33,10 @@
 
         <nav class="navbar navbar-expand-md sticky-top bg-light navbar-light">
             <div class="container">
-                <a class="navbar-brand" href="/"><img src="/img/torque.png" width="34" height="34" alt="">
-                    {{ site.name }}</a>
+                <a class="navbar-brand" href="/">
+                    <img class="lightlogo" src="/img/torquelight.png" width="134" height="34" alt="{{ site.name }}">
+                    <img class="darklogo" src="/img/torquedark.png" width="134" height="34" alt="{{ site.name }}">
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -143,60 +145,64 @@
         </nav>
 
 
-        {{ content }}
+        <div class="container">
+            {{ content }}
+        </div>
 
 
         <footer class="pt-4 my-md-5 pt-md-5 border-top">
-            <div class="row">
-                <div class="col-12 col-md">
-                    <img class="mb-2" src="/img/torque.png" alt="" width="24" height="24">
-                    <span>Torque</span>
-                    <small class="d-block mb-3 text-muted">© 2012-2020 by <br />
-                        <a href="https://github.com/{{ site.t3dgithub }}/" target="_blank">
-                            Contributors 
-                        </a>
-                    </small>
-                    <span>
-                        <span id="darkmode-toggle" style="cursor: pointer;text-decoration:underline">
-                            Dark Mode
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <img class="mb-2" src="/img/torque.png" alt="" width="24" height="24">
+                        <span>Torque</span>
+                        <small class="d-block mb-3 text-muted">© 2012-2020 by 
+                            <a href="https://github.com/{{ site.t3dgithub }}/" target="_blank">
+                                Contributors 
+                            </a>
+                        </small>
+                        <span>
+                            <span id="darkmode-toggle" style="cursor: pointer;">
+                                Dark Mode
+                            </span>
                         </span>
-                    </span>
-                </div>
-                <div class="col-6 col-md">
-                    <h5>Torque 3D</h5>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="https://github.com/{{ site.t3dgithub }}" target="_blank">
-                            T3D Github <i class="fa fa-external-link"></i></a>
-                        </li>
-                        <li><a class="text-muted" href="#">Features</a></li>
-                        <li><a class="text-muted" href="#">Roadmap</a></li>
-                        <li><a class="text-muted" href="#">History</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md">
-                    <h5>Torque 2D</h5>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="https://github.com/{{ site.t2dgithub }}" target="_blank">
-                            T2D Github <i class="fa fa-external-link"></i></a>
-                        </li>
-                        <li><a class="text-muted" href="#">Features</a></li>
-                        <li><a class="text-muted" href="#">Roadmap</a></li>
-                        <li><a class="text-muted" href="#">History</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md">
-                    <h5>Social</h5>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#" target="_blank">
-                            Discord <i class="fa fa-external-link"></i></a>
-                        </li>
-                        <li><a class="text-muted" href="#" target="_blank">
-                            Twitter <i class="fa fa-external-link"></i></a>
-                        </li>
-                        <li><a class="text-muted" href="{{ site.forumsroot }}" target="_blank">
-                            Forums <i class="fa fa-external-link"></i></a>
-                        </li>
-                    </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Torque 3D</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="https://github.com/{{ site.t3dgithub }}" target="_blank">
+                                T3D Github <i class="fa fa-external-link"></i></a>
+                            </li>
+                            <li><a class="text-muted" href="#">Features</a></li>
+                            <li><a class="text-muted" href="#">Roadmap</a></li>
+                            <li><a class="text-muted" href="#">History</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Torque 2D</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="https://github.com/{{ site.t2dgithub }}" target="_blank">
+                                T2D Github <i class="fa fa-external-link"></i></a>
+                            </li>
+                            <li><a class="text-muted" href="#">Features</a></li>
+                            <li><a class="text-muted" href="#">Roadmap</a></li>
+                            <li><a class="text-muted" href="#">History</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Social</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#" target="_blank">
+                                Discord <i class="fa fa-external-link"></i></a>
+                            </li>
+                            <li><a class="text-muted" href="#" target="_blank">
+                                Twitter <i class="fa fa-external-link"></i></a>
+                            </li>
+                            <li><a class="text-muted" href="{{ site.forumsroot }}" target="_blank">
+                                Forums <i class="fa fa-external-link"></i></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <!-- Design and code by Tony (zfbx) & Bootstrap -->
