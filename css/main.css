@@ -206,6 +206,15 @@ table.versioning>tbody>tr>td:first-child {
 .btn-default:hover {
     color: {{ secondary }}; 
 }
+.text-dark {
+    color: {{ dark }} !important;
+}
+.text-dark svg path {
+    fill: {{ dark }};
+}
+.text-dark svg path:hover {
+    fill: {{ dark2 }};
+}
 #darkmode-toggle {
     color: {{ dark }};
     display: block;
@@ -368,6 +377,12 @@ html.dark-mode .card {
 }
 html.dark-mode .text-dark {
     color: {{ light }} !important;
+}
+html.dark-mode .text-dark svg path {
+    fill: {{ light }};
+}
+html.dark-mode .text-dark svg path:hover {
+    fill: {{ light2 }};
 }
 html.dark-mode .img-thumbnail {
     background-color: {{ dark2 }};
